@@ -1,0 +1,136 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42160020 size=4ba74h (309876) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=0005ba9c vaddr=40800000 size=0457ch ( 17788) load[0m
+[0;32mI (175) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=150b74h (1379188) map[0m
+[0;32mI (460) esp_image: segment 3: paddr=001b0b9c vaddr=4080457c size=17e9ch ( 97948) load[0m
+[0;32mI (484) esp_image: segment 4: paddr=001c8a40 vaddr=4081c420 size=0458ch ( 17804) load[0m
+[0;32mI (496) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (496) boot: Disabling RNG early entropy source...[0m
+[0;32mI (508) cpu_start: Unicore app[0m
+[0;32mI (517) cpu_start: Pro cpu start user code[0m
+[0;32mI (517) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (517) app_init: Application information:[0m
+[0;32mI (520) app_init: Project name:     onoff_server[0m
+[0;32mI (525) app_init: App version:      1[0m
+[0;32mI (529) app_init: Compile time:     Jun 24 2024 12:44:04[0m
+[0;32mI (535) app_init: ELF file SHA256:  c1b608cd1...[0m
+[0;32mI (541) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (548) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (552) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (557) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (562) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (569) heap_init: At 4082C090 len 00050580 (321 KiB): RAM[0m
+[0;32mI (575) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (581) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (589) spi_flash: detected chip: generic[0m
+[0;32mI (593) spi_flash: flash io: dio[0m
+[0;32mI (597) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (603) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (610) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (638) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (639) main_task: Calling app_main()[0m
+[0;32mI (639) EXAMPLE: Initializing...[0m
+[0;32mI (639) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (649) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (659) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (679) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (679) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (679) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (729) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;31mE (739) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;33mW (739) BLE_INIT: invalid controller state[0m
+[0;31mE (739) EXAMPLE: Bluetooth controller initialize failed: ESP_ERR_INVALID_STATE[0m
+[0;31mE (749) EXAMPLE: Bluetooth mesh init failed (err 259)[0m
+[0;32mI (759) BLE_SCAN: Setting BLE scan parameters...[0m
+[0;32mI (759) BLE_SCAN: BLE scan parameters set successfully[0m
+[0;32mI (769) EXAMPLE: ESP_WIFI_MODE_STA[0m
+[0;32mI (769) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (779) net80211: net80211 rom version: 5b8dcfa[0m
+I (789) wifi:wifi driver task: 40840a90, prio:23, stack:6656, core=0
+I (789) wifi:wifi firmware version: eb97ced
+I (789) wifi:wifi certification version: v7.0
+I (799) wifi:config NVS flash: enabled
+I (799) wifi:config nano formating: disabled
+I (799) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1
+I (809) wifi:Init data frame dynamic rx buffer num: 32
+I (809) wifi:Init static rx mgmt buffer num: 5
+I (819) wifi:Init management short buffer num: 32
+I (819) wifi:Init dynamic tx buffer num: 32
+I (829) wifi:Init static tx FG buffer num: 2
+I (829) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)
+I (839) wifi:Init static rx buffer num: 10
+I (839) wifi:Init dynamic rx buffer num: 32
+[0;32mI (839) wifi_init: rx ba win: 6[0m
+[0;32mI (849) wifi_init: accept mbox: 6[0m
+[0;32mI (849) wifi_init: tcpip mbox: 32[0m
+[0;32mI (859) wifi_init: udp mbox: 6[0m
+[0;32mI (859) wifi_init: tcp mbox: 6[0m
+[0;32mI (859) wifi_init: tcp tx win: 5760[0m
+[0;32mI (869) wifi_init: tcp rx win: 5760[0m
+[0;32mI (869) wifi_init: tcp mss: 1440[0m
+[0;32mI (879) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (879) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (879) wifi_init: WiFi SLP IRAM OP enabled[0m
+W (959) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (959) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (959) wifi:(agc)0x600a7128:0xd20eba3e, min.avgNF:0xce->0xd2(dB), RCalCount:0xeb, min.RRssi:0xa3e(-92.12)
+W (969) wifi:(TB)WDEV_PWR_TB_MCS0:19
+W (979) wifi:(TB)WDEV_PWR_TB_MCS1:19
+W (979) wifi:(TB)WDEV_PWR_TB_MCS2:19
+W (979) wifi:(TB)WDEV_PWR_TB_MCS3:19
+W (989) wifi:(TB)WDEV_PWR_TB_MCS4:19
+W (989) wifi:(TB)WDEV_PWR_TB_MCS5:19
+W (989) wifi:(TB)WDEV_PWR_TB_MCS6:18
+W (999) wifi:(TB)WDEV_PWR_TB_MCS7:18
+W (999) wifi:(TB)WDEV_PWR_TB_MCS8:17
+W (999) wifi:(TB)WDEV_PWR_TB_MCS9:15
+W (1009) wifi:(TB)WDEV_PWR_TB_MCS10:15
+W (1009) wifi:(TB)WDEV_PWR_TB_MCS11:15
+I (1009) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).
+
+W (1019) wifi:(he)attach, station, phymode:11ax
+I (1019) wifi:mode : sta (54:32:04:07:2d:14)
+I (1029) wifi:enable tsf
+[0;32mI (1029) EXAMPLE: wifi_init_sta finished.[0m
+I (1339) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (1339) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1
+I (1339) wifi:state: init -> auth (0xb0)
+I (1349) wifi:state: auth -> assoc (0x0)
+I (1359) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0
+I (1359) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0
+I (1369) wifi:Extended Capabilities length:8, operating_mode_notification:1
+I (1379) wifi:state: assoc -> run (0x10)
+I (1379) wifi:(trc)phytype:CBW20-SGI, snr:26, maxRate:144, highestRateIdx:0
+W (1389) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14
+I (1399) wifi:(trc)band:2G, rate(L-MCS4, rateIdx:4), ampdu(rate:L-MCS4, schedIdx(4, stop:8)), snr:26, ampduState:wait operational
+I (1409) wifi:ifidx:0, rssi:-70, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1
+I (1419) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)
+I (1429) wifi:connected with zipato-xxx, aid = 1, channel 11, BW20, bssid = e0:63:da:03:d4:61
+I (1429) wifi:cipher(pairwise:0x3, group:0x1), pmf:0, security:WPA2-PSK, phy:11bgn, rssi:-70
+I (1449) wifi:pm start, type: 1, twt_start:0
+
+I (1449) wifi:pm start, type:1, aid:0x1, trans-BSSID:e0:63:da:03:d4:61, B

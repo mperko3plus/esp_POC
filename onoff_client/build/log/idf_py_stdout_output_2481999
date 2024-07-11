@@ -1,0 +1,145 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  3 2024 18:42:25[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42120020 size=3bcc8h (244936) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004bcf0 vaddr=40800000 size=04328h ( 17192) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=119464h (1152100) map[0m
+[0;32mI (400) esp_image: segment 3: paddr=0016948c vaddr=40804328 size=19224h (102948) load[0m
+[0;32mI (425) esp_image: segment 4: paddr=001826b8 vaddr=4081d550 size=03c1ch ( 15388) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (437) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Unicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     spp_client_demo[0m
+[0;32mI (466) app_init: App version:      1[0m
+[0;32mI (470) app_init: Compile time:     Jul  3 2024 18:43:55[0m
+[0;32mI (476) app_init: ELF file SHA256:  30d04124e...[0m
+[0;32mI (481) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (488) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (493) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (503) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (510) heap_init: At 408297F0 len 00052E20 (331 KiB): RAM[0m
+[0;32mI (516) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (522) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (533) spi_flash: flash io: dio[0m
+[0;32mI (537) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (544) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (551) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (579) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (579) main_task: Calling app_main()[0m
+[0;32mI (589) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (589) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (589) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (639) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (639) GATTC_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (649) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (649) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (649) GATTC_SPP_DEMO: EVT 0, gY�[0;32mI (669) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (669) net80211: net80211 rom version: 5b8dcfa[0m
+I (679) wifi:wifi driver task: 408426c0, prio:23, stack:6656, core=0
+I (679) wifi:wifi firmware version: eb97ced
+I (679) wifi:wifi certification version: v7.0
+I (679) wifi:config NVS flash: enabled
+I (679) wifi:config nano formating: disabled
+I (689) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1
+I (689) wifi:Init data frame dynamic rx buffer num: 32
+I (699) wifi:Init static rx mgmt buffer num: 5
+I (699) wifi:Init management short buffer num: 32
+I (709) wifi:Init dynamic tx buffer num: 32
+I (709) wifi:Init static tx FG buffer num: 2
+I (709) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)
+I (719) wifi:Init static rx buffer num: 10
+I (719) wifi:Init dynamic rx buffer num: 32
+[0;32mI (729) wifi_init: rx ba win: 6[0m
+[0;32mI (729) wifi_init: accept mbox: 6[0m
+[0;32mI (739) wifi_init: tcpip mbox: 32[0m
+[0;32mI (739) wifi_init: udp mbox: 6[0m
+[0;32mI (739) wifi_init: tcp mbox: 6[0m
+[0;32mI (749) wifi_init: tcp tx win: 5760[0m
+[0;32mI (749) wifi_init: tcp rx win: 5760[0m
+[0;32mI (759) wifi_init: tcp mss: 1440[0m
+[0;32mI (759) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (759) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (769) wifi_init: WiFi SLP IRAM OP enabled[0m
+W (839) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (839) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (849) wifi:(agc)0x600a7128:0xd2002800, min.avgNF:0xce->0xd2(dB), RCalCount:0x2, min.RRssi:0x800(-128.00)
+W (849) wifi:(TB)WDEV_PWR_TB_MCS0:19
+W (859) wifi:(TB)WDEV_PWR_TB_MCS1:19
+W (859) wifi:(TB)WDEV_PWR_TB_MCS2:19
+W (859) wifi:(TB)WDEV_PWR_TB_MCS3:19
+W (869) wifi:(TB)WDEV_PWR_TB_MCS4:19
+W (869) wifi:(TB)WDEV_PWR_TB_MCS5:19
+W (869) wifi:(TB)WDEV_PWR_TB_MCS6:18
+W (879) wifi:(TB)WDEV_PWR_TB_MCS7:18
+W (879) wifi:(TB)WDEV_PWR_TB_MCS8:17
+W (879) wifi:(TB)WDEV_PWR_TB_MCS9:15
+W (889) wifi:(TB)WDEV_PWR_TB_MCS10:15
+W (889) wifi:(TB)WDEV_PWR_TB_MCS11:15
+I (889) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).
+
+W (899) wifi:(he)attach, station, phymode:11ax
+I (909) wifi:mode : sta (54:32:04:07:2d:14)
+I (909) wifi:enable tsf
+[0;32mI (909) WIFI_DEMO: wifi_init_sta finished.[0m
+I (1229) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (1229) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3
+I (1229) wifi:state: init -> auth (0xb0)
+I (1239) wifi:state: auth -> assoc (0x0)
+I (1249) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0
+I (1249) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0
+I (1259) wifi:Extended Capabilities length:8, operating_mode_notification:1
+I (1269) wifi:state: assoc -> run (0x10)
+I (1269) wifi:(trc)phytype:CBW20-SGI, snr:63, maxRate:144, highestRateIdx:0
+W (1279) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14
+I (1289) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:63, ampduState:wait operational
+I (1299) wifi:ifidx:0, rssi:-34, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1
+I (1309) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)
+I (1329) wifi:connected with Galaxy A53 5G CA17, aid = 2, channel 11, BW20, bssid = 02:0b:b3:1a:c6:27
+I (1329) wifi:cipher(pairwise:0x3, group:0x3), pmf:0, security:WPA2-PSK, phy:11bgn, rssi:-34
+I (1339) wifi:pm start, type: 1, twt_start:0
+
+I (1339) wifi:pm start, type:1, aid:0x2, trans-BSSID:02:0b:b3:1a:c6:27, BSSID[5]:0x27, mbssid(max-indicator:0, index:0), he:0
+I (1349) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1359) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000
+I (1359) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (1379) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)
+I (1389) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+W (1399) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x10027c6, TALO:0x1ab30b02, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005
+I (1409) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1419) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (1419) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (1429) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (1439) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+[0;32mI (2449) esp_netif_handlers: sta ip: 192.168.180.210, mask: 255.255.255.0, gw: 192.168.180.238[0m
+[0;32mI (2449) WIFI_DEMO: got ip:192.168.180.210[0m
+[0;32mI (2449) WIFI_DEMO: connected to ap SSID:Galaxy A53 5G CA17 password:mperko12[0m
+[0;32mI (2979) WIFI_DEMO: Successfully connected to server[0m
+[0;32mI (2979) WIFI_DEMO: JSON message sent successfully: {"event":"init","serial":"213124"}[0m
+[0;32mI (2979) main_task: Returned from app_main()[0m

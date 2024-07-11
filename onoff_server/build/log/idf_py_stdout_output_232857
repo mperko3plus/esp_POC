@@ -1,0 +1,181 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=3dabch (252604) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0004dae4 vaddr=40800000 size=02534h (  9524) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=f2938h (993592) map[0m
+[0;32mI (369) esp_image: segment 3: paddr=00142960 vaddr=40802534 size=109fch ( 68092) load[0m
+[0;32mI (386) esp_image: segment 4: paddr=00153364 vaddr=40812f30 size=03094h ( 12436) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Unicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) app_init: Application information:[0m
+[0;32mI (418) app_init: Project name:     onoff_server[0m
+[0;32mI (423) app_init: App version:      1[0m
+[0;32mI (428) app_init: Compile time:     Jul  5 2024 13:25:44[0m
+[0;32mI (434) app_init: ELF file SHA256:  015c11c30...[0m
+[0;32mI (439) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (446) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (451) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (456) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (460) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 4081E570 len 0005E0A0 (376 KiB): RAM[0m
+[0;32mI (474) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (480) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (487) spi_flash: detected chip: generic[0m
+[0;32mI (491) spi_flash: flash io: dio[0m
+[0;33mW (495) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (508) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (515) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (522) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (536) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (537) main_task: Started on CPU0[0m
+[0;32mI (537) main_task: Calling app_main()[0m
+[0;32mI (537) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (547) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (557) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (567) esp_timer: Task is already initialized[0m
+[0;32mI (567) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;33mW (577) BOARD: led red is already off[0m
+[0;32mI (597) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (597) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (597) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (647) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (647) GATTS_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (657) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (657) GATTS_SPP_DEMO: EVT 0, gatts if 3[0m
+[0;32mI (667) GATTS_SPP_DEMO: event = 0[0m
+[0;32mI (667) GATTS_SPP_DEMO: gatts_profile_event_handler 574[0m
+[0;32mI (677) GATTS_SPP_DEMO: gatts_profile_event_handler 577[0m
+[0;32mI (677) GATTS_SPP_DEMO: gatts_profile_event_handler 580[0m
+[0;32mI (687) GATTS_SPP_DEMO: EVT 22, gatts if 3[0m
+[0;32mI (687) GATTS_SPP_DEMO: event = 16[0m
+[0;32mI (697) GATTS_SPP_DEMO: The number handle =f[0m
+[0;32mI (697) GATTS_SPP_DEMO: GAP_EVT, event 4[0m
+[0;32mI (707) GATTS_SPP_DEMO: EVT 12, gatts if 3[0m
+[0;32mI (707) GATTS_SP@�[0;32mI (717) main_task: Returned from app_main()[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x40031c8a  RA      : 0x4003d3d4  SP      : 0x4081ff30  GP      : 0x40813734  
+TP      : 0x40820440  T0      : 0x40028140  T1      : 0x10000000  T2      : 0x00000200  
+S0/FP   : 0x00000000  S1      : 0x00000003  A0      : 0x00000000  A1      : 0xffffffff  
+A2      : 0x00000003  A3      : 0x7f7f7f7f  A4      : 0x00000000  A5      : 0x00000004  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x00000000  S3      : 0x4081f198  
+S4      : 0x408204a0  S5      : 0x00000009  S6      : 0x00000002  S7      : 0x00000002  
+S8      : 0x42103a67  S9      : 0x00000000  S10     : 0x40820004  S11     : 0xffffffff  
+T3      : 0x00000000  T4      : 0x10000000  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+0x40031c8a in ?? ()
+#0  0x40031c8a in ?? ()
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+ELF file SHA256: 015c11c30
+
+Rebooting...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (26) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (29) boot: chip revision: v0.0[0m
+[0;32mI (32) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) boot: Defaulting to factory image[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=3dabch (252604) map[0m
+[0;32mI (213) esp_image: segment 1: paddr=0004dae4 vaddr=40800000 size=02534h (  9524) load[0m
+[0;32mI (218) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=f2938h (993592) map[0m
+[0;32mI (624) esp_image: segment 3: paddr=00142960 vaddr=40802534 size=109fch ( 68092) load[0m
+[0;32mI (657) esp_image: segment 4: paddr=00153364 vaddr=40812f30 size=03094h ( 12436) load[0m
+[0;32mI (673) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (674) boot: Disabling RNG early entropy source...[0m
+[0;32mI (685) cpu_start: Unicore app[0m
+[0;32mI (695) cpu_start: Pro cpu start user code[0m
+[0;32mI (695) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (696) app_init: Application information:[0m
+[0;32mI (698) app_init: Project name:     onoff_server[0m
+[0;32mI (703) app_init: App version:      1[0m
+[0;32mI (708) app_init: Compile time:     Jul  5 2024 13:25:44[0m
+[0;32mI (714) app_init: ELF file SHA256:  015c11c30...[0m
+[0;32mI (719) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (726) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (731) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (736) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (748) heap_init: At 4081E570 len 0005E0A0 (376 KiB): RAM[0m
+[0;32mI (754) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (760) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (767) spi_flash: detected chip: generic[0m
+[0;32mI (771) spi_flash: flash io: dio[0m
+[0;33mW (775) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (788) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (795) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (802) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (816) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (817) main_task: Started on CPU0[0m
+[0;32mI (817) main_task: Calling app_main()[0m
+[0;32mI (817) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (827) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (837) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+use esp timer !!!
+[0;31mE (847) esp_timer: Task is already initialized[0m
+[0;32mI (847) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;33mW (857) BOARD: led red is already off[0m
+[0;32mI (877) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (877) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (877) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (927) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (927) GATTS_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (937) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (937) GATTS_SPP_DEMO: EVT 0, gatts if 3[0m
+[0;32mI (937) GATTS_SPP_DEMO: event = 0[0m
+[0;32mI (947) GATTS_SPP_DEMO: gatts_profile_event_handler 574[0m
+[0;32mI (947) GATTS_SPP_DEMO: gatts_profile_event_handler 577[0m
+[0;32mI (957) GATTS_SPP_DEMO: gatts_profile_event_handler 580[0m
+[0;32mI (967) GATTS_SPP_DEMO: EVT 22, gatts if 3[0m
+[0;32mI (967) GATTS_SPP_DEMO: event = 16[0m
+[0;32mI (967) GATTS_SPP_DEMO: The number handle =f[0m
+[0;32mI (977) GATTS_SPP_DEMO: GAP_EVT, event 4[0m
+[0;32mI (977) GATTS_SPP_DEMO: EVT 12, gatts if 3[0m
+[0;32mI (987) GATTS_SP@�[0;32mI (997) main_task: Returned from app_main()[0m

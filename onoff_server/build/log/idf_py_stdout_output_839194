@@ -1,0 +1,529 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=3d018h (249880) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0004d040 vaddr=40800000 size=02fd8h ( 12248) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=ef134h (979252) map[0m
+[0;32mI (365) esp_image: segment 3: paddr=0013f15c vaddr=40802fd8 size=0ed2ch ( 60716) load[0m
+[0;32mI (380) esp_image: segment 4: paddr=0014de90 vaddr=40811d10 size=03274h ( 12916) load[0m
+[0;32mI (389) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (389) boot: Disabling RNG early entropy source...[0m
+[0;32mI (401) cpu_start: Unicore app[0m
+[0;32mI (410) cpu_start: Pro cpu start user code[0m
+[0;32mI (410) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (410) app_init: Application information:[0m
+[0;32mI (413) app_init: Project name:     onoff_server[0m
+[0;32mI (418) app_init: App version:      1[0m
+[0;32mI (423) app_init: Compile time:     Jul  1 2024 15:49:57[0m
+[0;32mI (428) app_init: ELF file SHA256:  06936778f...[0m
+[0;32mI (434) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (441) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (445) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (450) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (455) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (462) heap_init: At 4081D4E0 len 0005F130 (380 KiB): RAM[0m
+[0;32mI (469) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (475) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (482) spi_flash: detected chip: generic[0m
+[0;32mI (486) spi_flash: flash io: dio[0m
+[0;33mW (490) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (503) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (510) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (517) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (531) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (532) main_task: Started on CPU0[0m
+[0;32mI (532) main_task: Calling app_main()[0m
+[0;32mI (532) EXAMPLE: Initializing...[0m
+[0;32mI (532) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (542) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (552) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (572) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (572) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (572) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (622) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;31mE (632) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (692) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (692) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (692) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (702) main_task: Returned from app_main()[0m
+[0;31mE (305712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (310712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (315712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (320712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (325712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (330712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (335712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (340712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (345712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (350712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (355712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (360712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (365712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (370712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (375712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (380712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (385712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (390712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (395712) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (400722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (405722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (410722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (415722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (420722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (425722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (430722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (435722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (440722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (445722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (450722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (455722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (460722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (465722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (470722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (475722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (480722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (485722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (490722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (495722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (500722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (505722) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (510732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (515732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (520732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (525732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (530732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (535732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (540732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (545732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (550732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (555732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (560732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (565732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (570732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (575732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (580732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (585732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (590732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (595732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (600732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (605732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (610732) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (615742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (620742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (625742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (630742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (635742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (640742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (645742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (650742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (655742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (660742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (665742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (670742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (675742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (680742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (685742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (690742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (695742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (700742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (705742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (710742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (715742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (720742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (725742) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (730752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (735752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (740752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (745752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (750752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (755752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (760752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (765752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (770752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (775752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (780752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (785752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (790752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (795752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (800752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (805752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (810752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (815752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (820752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (825752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (830752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (835752) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (840762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (845762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (850762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (855762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (860762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (865762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (870762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (875762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (880762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (885762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (890762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (895762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (900762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (905762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (910762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (915762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (920762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (925762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (930762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (935762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (940762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (945762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (950762) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (955772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (960772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (965772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (970772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (975772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (980772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (985772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (990772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (995772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1000772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1005772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1010772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1015772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1020772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1025772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1030772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1035772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1040772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1045772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1050772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1055772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1060772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1065772) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1070782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1075782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1080782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1085782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1090782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1095782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1100782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1105782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1110782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1115782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1120782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1125782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1130782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1135782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1140782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1145782) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1150792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1155792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1160792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1165792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1170792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1175792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1180792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1185792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1190792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1195792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1200792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1205792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1210792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1215792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1220792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1225792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1230792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1235792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1240792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1245792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1250792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1255792) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1260802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1265802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1270802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1275802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1280802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1285802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1290802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1295802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1300802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1305802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1310802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1315802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1320802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1325802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1330802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1335802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1340802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1345802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1350802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1355802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1360802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1365802) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1370812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1375812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1380812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1385812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1390812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1395812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1400812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1405812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1410812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1415812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1420812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1425812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1430812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1435812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1440812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1445812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1450812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1455812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1460812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1465812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1470812) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1475822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1480822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1485822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1490822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1495822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1500822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1505822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1510822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1515822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1520822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1525822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1530822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1535822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1540822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1545822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1550822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1555822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1560822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1565822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1570822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1575822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1580822) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1585832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1590832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1595832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1600832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1605832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1610832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1615832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1620832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1625832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1630832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1635832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1640832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1645832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1650832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1655832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1660832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1665832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1670832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1675832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1680832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1685832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1690832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1695832) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1700842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1705842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1710842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1715842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1720842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1725842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1730842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1735842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1740842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1745842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1750842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1755842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1760842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1765842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1770842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1775842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1780842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1785842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1790842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1795842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1800842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1805842) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1810852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1815852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1820852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1825852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1830852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1835852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1840852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1845852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1850852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1855852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1860852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1865852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1870852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1875852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1880852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1885852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1890852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1895852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1900852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1905852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1910852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1915852) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1920862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1925862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1930862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1935862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1940862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1945862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1950862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1955862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1960862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1965862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1970862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1975862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1980862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1985862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1990862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (1995862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2000862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2005862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2010862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2015862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2020862) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2025872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2030872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2035872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2040872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2045872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2050872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2055872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2060872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2065872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2070872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2075872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2080872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2085872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2090872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2095872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2100872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2105872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2110872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2115872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2120872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2125872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2130872) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2135882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2140882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2145882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2150882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2155882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2160882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2165882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2170882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2175882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2180882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2185882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2190882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2195882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2200882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2205882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2210882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2215882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2220882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2225882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2230882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2235882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2240882) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2245892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2250892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2255892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2260892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2265892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2270892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2275892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2280892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2285892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2290892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2295892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2300892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2305892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2310892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2315892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2320892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2325892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2330892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2335892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2340892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2345892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2350892) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2355902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2360902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2365902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2370902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2375902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2380902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2385902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2390902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2395902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2400902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2405902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2410902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2415902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2420902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2425902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2430902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2435902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2440902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2445902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2450902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2455902) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2460912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2465912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2470912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2475912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2480912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2485912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2490912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2495912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2500912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2505912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2510912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2515912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2520912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2525912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2530912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2535912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2540912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2545912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2550912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2555912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2560912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2565912) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2570922) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2575922) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2580922) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2585922) BLE_MESH: Out of unprov beacon buffer[0m
+[0;31mE (2590922) BLE_MESH: Out of unprov beacon buffer[0m
+[0

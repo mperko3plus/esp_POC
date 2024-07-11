@@ -1,0 +1,19 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB1 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33mStack dump detected[0m
+[0;33m0x42008a82: uart_ll_get_txfifo_len at /home/mperko/esp-idf/components/hal/esp32c6/include/hal/uart_ll.h:588
+ (inlined by) uart_tx_char at /home/mperko/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x42009c26: uart_write at /home/mperko/esp-idf/components/esp_driver_uart/src/uart_vfs.c:215 (discriminator 2)
+[0m
+[0;33m0x40028140: __retarget_lock_acquire_recursive in ROM
+0x4200d7ce: esp_vfs_register_fd_range at /home/mperko/esp-idf/components/vfs/vfs.c:143
+[0m
+[0;33m0x42009bb2: uart_write at /home/mperko/esp-idf/components/esp_driver_uart/src/uart_vfs.c:207
+[0m
+[0;33m0x40800bc2: heap_caps_free at /home/mperko/esp-idf/components/heap/heap_caps_base.c:73
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/mperko/bleesp/onoff_client/build/spp_client_demo.elf', '-ex', 'target remote | "/home/mperko/.espressif/python_env/idf5.4_py3.10_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/tmp/tmprt1dqu2g"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\n    exec(code, run_globals)\n  File "/home/mperko/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n  File "/home/mperko/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 285, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/mperko/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 136, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote communication error.  Target disconnected: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0m

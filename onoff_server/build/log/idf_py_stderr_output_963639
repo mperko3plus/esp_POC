@@ -1,0 +1,100 @@
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 188, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 386, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Adjust size as needed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 190, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 4: CSV flag column contains unknown flag '# Adjust size as needed'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 188, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 386, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Adjust size as needed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 190, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 4: CSV flag column contains unknown flag '# Adjust size as needed'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 188, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 386, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Adjust size as needed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 190, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 4: CSV flag column contains unknown flag '# Adjust size as needed'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 188, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 386, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Adjust size as needed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 190, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 4: CSV flag column contains unknown flag '# Adjust size as needed'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 188, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 386, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Adjust size as needed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+  File "/home/mperko/esp-idf/components/partition_table/gen_esp32part.py", line 190, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 4: CSV flag column contains unknown flag '# Adjust size as needed'
+Please check extra_partition_subtypes.inc file in build/config directory

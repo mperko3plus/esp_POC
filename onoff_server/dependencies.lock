@@ -1,0 +1,27 @@
+dependencies:
+  button:
+    component_hash: null
+    source:
+      path: /home/mperko/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/button
+      type: local
+    version: '*'
+  example_init:
+    component_hash: null
+    source:
+      path: /home/mperko/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/example_init
+      type: local
+    version: '*'
+  example_nvs:
+    component_hash: null
+    source:
+      path: /home/mperko/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/example_nvs
+      type: local
+    version: '*'
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.4.0
+manifest_hash: a89f37c0bf29db6b06461756d58a0b18eaa38aec25cc053f7fc43c2d5bf285b9
+target: esp32c6
+version: 1.0.0

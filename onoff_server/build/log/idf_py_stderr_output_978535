@@ -1,0 +1,50 @@
+CMake Warning at /home/mperko/esp-idf/components/partition_table/project_include.cmake:23 (message):
+  Partition table CSV file /home/mperko/bleesp/onoff_server/partitions.csv
+  not found.  Change custom partition CSV path in menuconfig.
+Call Stack (most recent call first):
+  /home/mperko/esp-idf/tools/cmake/build.cmake:401 (include)
+  /home/mperko/esp-idf/tools/cmake/build.cmake:633 (__build_process_project_includes)
+  /home/mperko/esp-idf/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 88, in __init__
+    with open(partition_table_file, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mperko/bleesp/onoff_server/partitions.csv'
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 88, in __init__
+    with open(partition_table_file, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mperko/bleesp/onoff_server/partitions.csv'
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 88, in __init__
+    with open(partition_table_file, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mperko/bleesp/onoff_server/partitions.csv'
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 88, in __init__
+    with open(partition_table_file, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mperko/bleesp/onoff_server/partitions.csv'
+Traceback (most recent call last):
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+  File "/home/mperko/esp-idf/components/partition_table/parttool.py", line 88, in __init__
+    with open(partition_table_file, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mperko/bleesp/onoff_server/partitions.csv'

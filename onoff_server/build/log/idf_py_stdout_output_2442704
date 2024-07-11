@@ -1,0 +1,1034 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42160020 size=4bcech (310508) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=0005bd14 vaddr=40800000 size=04304h ( 17156) load[0m
+[0;32mI (175) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=151710h (1382160) map[0m
+[0;32mI (461) esp_image: segment 3: paddr=001b1738 vaddr=40804304 size=18114h ( 98580) load[0m
+[0;32mI (485) esp_image: segment 4: paddr=001c9854 vaddr=4081c420 size=045ach ( 17836) load[0m
+[0;32mI (497) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (497) boot: Disabling RNG early entropy source...[0m
+[0;32mI (509) cpu_start: Unicore app[0m
+[0;32mI (518) cpu_start: Pro cpu start user code[0m
+[0;32mI (518) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (518) app_init: Application information:[0m
+[0;32mI (521) app_init: Project name:     onoff_server[0m
+[0;32mI (526) app_init: App version:      1[0m
+[0;32mI (530) app_init: Compile time:     Jun 24 2024 17:20:51[0m
+[0;32mI (536) app_init: ELF file SHA256:  2810e5b31...[0m
+[0;32mI (542) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (549) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (553) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (558) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (563) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (570) heap_init: At 4082C260 len 000503B0 (320 KiB): RAM[0m
+[0;32mI (576) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (582) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (593) spi_flash: flash io: dio[0m
+[0;32mI (598) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (604) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (611) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (639) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (640) main_task: Started on CPU0[0m
+[0;32mI (640) main_task: Calling app_main()[0m
+[0;32mI (640) EXAMPLE: Initializing...[0m
+[0;32mI (640) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (650) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (660) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (680) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (680) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (680) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (730) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;31mE (740) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (790) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (800) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (800) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (800) EXAMPLE: ESP_WIFI_MODE_STA[0m
+[0;32mI (810) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (810) net80211: net80211 rom version: 5b8dcfa[0m
+I (830) wifi:wifi driver task: 40843b9c, prio:23, stack:6656, core=0
+I (830) wifi:wifi firmware version: eb97ced
+I (830) wifi:wifi certification version: v7.0
+I (830) wifi:config NVS flash: enabled
+I (830) wifi:config nano formating: disabled
+I (840) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1
+I (840) wifi:Init data frame dynamic rx buffer num: 32
+I (850) wifi:Init static rx mgmt buffer num: 5
+I (850) wifi:Init management short buffer num: 32
+I (860) wifi:Init dynamic tx buffer num: 32
+I (860) wifi:Init static tx FG buffer num: 2
+I (860) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)
+I (870) wifi:Init static rx buffer num: 10
+I (870) wifi:Init dynamic rx buffer num: 32
+[0;32mI (880) wifi_init: rx ba win: 6[0m
+[0;32mI (880) wifi_init: accept mbox: 6[0m
+[0;32mI (890) wifi_init: tcpip mbox: 32[0m
+[0;32mI (890) wifi_init: udp mbox: 6[0m
+[0;32mI (890) wifi_init: tcp mbox: 6[0m
+[0;32mI (900) wifi_init: tcp tx win: 5760[0m
+[0;32mI (900) wifi_init: tcp rx win: 5760[0m
+[0;32mI (910) wifi_init: tcp mss: 1440[0m
+[0;32mI (910) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (910) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (920) wifi_init: WiFi SLP IRAM OP enabled[0m
+W (950) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (950) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (950) wifi:(agc)0x600a7128:0xd21e9a4e, min.avgNF:0xce->0xd2(dB), RCalCount:0x1e9, min.RRssi:0xa4e(-91.12)
+W (960) wifi:(TB)WDEV_PWR_TB_MCS0:19
+W (960) wifi:(TB)WDEV_PWR_TB_MCS1:19
+W (970) wifi:(TB)WDEV_PWR_TB_MCS2:19
+W (970) wifi:(TB)WDEV_PWR_TB_MCS3:19
+W (970) wifi:(TB)WDEV_PWR_TB_MCS4:19
+W (980) wifi:(TB)WDEV_PWR_TB_MCS5:19
+W (980) wifi:(TB)WDEV_PWR_TB_MCS6:18
+W (980) wifi:(TB)WDEV_PWR_TB_MCS7:18
+W (990) wifi:(TB)WDEV_PWR_TB_MCS8:17
+W (990) wifi:(TB)WDEV_PWR_TB_MCS9:15
+W (990) wifi:(TB)WDEV_PWR_TB_MCS10:15
+W (1000) wifi:(TB)WDEV_PWR_TB_MCS11:15
+I (1000) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).
+
+W (1010) wifi:(he)attach, station, phymode:11ax
+I (1010) wifi:mode : sta (54:32:04:07:2d:14)
+I (1010) wifi:enable tsf
+[0;32mI (1020) EXAMPLE: wifi_init_sta finished.[0m
+I (1340) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (1340) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1
+I (1340) wifi:state: init -> auth (0xb0)
+I (1350) wifi:state: auth -> assoc (0x0)
+I (1360) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0
+I (1360) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0
+I (1370) wifi:Extended Capabilities length:8, operating_mode_notification:1
+I (1380) wifi:state: assoc -> run (0x10)
+I (1380) wifi:(trc)phytype:CBW20-SGI, snr:26, maxRate:144, highestRateIdx:0
+W (1390) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14
+I (1400) wifi:(trc)band:2G, rate(L-MCS4, rateIdx:4), ampdu(rate:L-MCS4, schedIdx(4, stop:8)), snr:26, ampduState:wait operational
+I (1410) wifi:ifidx:0, rssi:-70, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1
+I (1420) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)
+I (1440) wifi:connected with zipato-xxx, aid = 5, channel 11, BW20, bssid = e0:63:da:03:d4:61
+I (1440) wifi:cipher(pairwise:0x3, group:0x1), pmf:0, security:WPA2-PSK, phy:11bgn, rssi:-70
+I (1460) wifi:pm start, type: 1, twt_start:0
+
+I (1460) wifi:pm start, type:1, aid:0x5, trans-BSSID:e0:63:da:03:d4:61, BSSID[5]:0x61, mbssid(max-indicator:0, index:0), he:0
+I (1460) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1470) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000
+I (1480) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (1490) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)
+I (1500) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (1510) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1560) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+W (1770) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x10061d4, TALO:0x3da63e0, (ssn:1, win:64, cur_ssn:1), CONF:0xc0000005
+[0;32mI (2520) esp_netif_handlers: sta ip: 172.16.18.151, mask: 255.255.252.0, gw: 172.16.16.1[0m
+[0;32mI (2520) EXAMPLE: got ip:172.16.18.151[0m
+[0;32mI (2520) EXAMPLE: connected to ap SSID:zipato-xxx password:87654321[0m
+I (2530) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (2540) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (14350) wifi:[ADDBA]RX DELBA, reason:39, delete tid:5, initiator:0(recipient)
+I (14350) wifi:[ADDBA]RX DELBA, reason:39, delete tid:7, initiator:0(recipient)
+W (15820) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x10061d4, TALO:0x3da63e0, (ssn:9, win:64, cur_ssn:9), CONF:0xc0006005
+[0;31mE (20780) EXAMPLE: Socket connect failed[0m
+BLE scanning started successfully.
+[0;32mI (20780) main_task: Returned from app_main()[0m
+Received BLE advertising packet:
+  RSSI: -73 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -56 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -65 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 24:41:37:a4:05:40
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -44 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -94 dBm
+  Address: 3c:19:9d:d5:26:5b
+  Advertising Data: 1e ff 06 00 01 09 20 22 ff 05 58 cc bc 64 84 5c 7a 5a 1f 02 11 8e d4 36 dd a6 b5 a6 37 31 73 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 74:3e:55:51:ab:d2
+  Advertising Data: 02 01 02 0e ff 75 00 01 00 02 00 01 03 ff 00 00 43 01 03 19 c0 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: 6c:ed:15:e1:8a:f1
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -69 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -62 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -68 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 44:73:d6:77:50:88
+  Advertising Data: 02 01 06 05 16 61 fe 00 02 05 ff da 01 00 02 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -73 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -64 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -82 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -94 dBm
+  Address: 79:86:f0:4d:e5:55
+  Advertising Data: 1a ff 4c 00 02 15 50 76 5c b7 d9 ea 4e 21 99 a4 fa 87 96 13 a4 92 ac 81 26 d9 ce 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -76 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 24:41:37:a4:05:40
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -71 dBm
+  Address: 71:88:3b:04:76:bc
+  Advertising Data: 02 01 1a 02 0a 0c 0a ff 4c 00 10 05 07 1c 69 46 49 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -63 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 74:3e:55:51:ab:d2
+  Advertising Data: 02 01 02 0e ff 75 00 01 00 02 00 01 03 ff 00 00 43 01 03 19 c0 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -74 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 6c:ed:15:e1:8a:f1
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -93 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -65 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -46 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -75 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: dc:23:4d:ad:7e:78
+  Advertising Data: 02 01 06 03 02 01 a2 0c 16 01 a2 00 4e 73 a6 f4 f5 dd 77 32 00 00 00 00 00 00 00 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -76 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -64 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -53 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 2a:61:6d:00:e8:3c
+  Advertising Data: 02 01 1a 0b ff 4c 00 09 06 03 90 ac 10 01 9d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -78 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 71:88:3b:04:76:bc
+  Advertising Data: 02 01 1a 02 0a 0c 0a ff 4c 00 10 05 07 1c 69 46 49 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 74:3e:55:51:ab:d2
+  Advertising Data: 02 01 02 0e ff 75 00 01 00 02 00 01 03 ff 00 00 43 01 03 19 c0 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -82 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 6c:ed:15:e1:8a:f1
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 79:3b:5d:f4:2f:14
+  Advertising Data: 02 01 1a 02 0a 0c 07 ff 4c 00 10 02 13 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -54 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -75 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -67 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -93 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -82 dBm
+  Address: e6:a5:48:e6:dd:4a
+  Advertising Data: 02 01 06 03 02 01 a2 0c 16 01 a2 00 ec 01 35 0c bd b6 fb 5c 00 00 00 00 00 00 00 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -45 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 24:41:37:a4:05:40
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -70 dBm
+  Address: 71:88:3b:04:76:bc
+  Advertising Data: 02 01 1a 02 0a 0c 0a ff 4c 00 10 05 07 1c 69 46 49 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -82 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 6c:ed:15:e1:8a:f1
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -86 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -76 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -77 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: 2a:61:6d:00:e8:3c
+  Advertising Data: 02 01 1a 0b ff 4c 00 09 06 03 90 ac 10 01 9d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -63 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -68 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -78 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -67 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -81 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 79:86:f0:4d:e5:55
+  Advertising Data: 1a ff 4c 00 02 15 50 76 5c b7 d9 ea 4e 21 99 a4 fa 87 96 13 a4 92 ac 81 26 d9 ce 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 68:e4:d5:8f:36:ef
+  Advertising Data: 02 01 02 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -50 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -68 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 24:41:37:a4:05:40
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -66 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 74:3e:55:51:ab:d2
+  Advertising Data: 02 01 02 0e ff 75 00 01 00 02 00 01 03 ff 00 00 43 01 03 19 c0 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -65 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -82 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -81 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -63 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -59 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 6e:66:db:45:5f:cb
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -43 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -81 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -67 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -68 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -71 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -96 dBm
+  Address: dc:23:4d:ad:7e:78
+  Advertising Data: 02 01 06 03 02 01 a2 0c 16 01 a2 00 4e 73 a6 f4 f5 dd 77 32 00 00 00 00 00 00 00 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -84 dBm
+  Address: c7:3b:e2:c3:cd:1e
+  Advertising Data: 07 ff 4c 00 12 02 00 01 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -75 dBm
+  Address: 71:88:3b:04:76:bc
+  Advertising Data: 02 01 1a 02 0a 0c 0a ff 4c 00 10 05 07 1c 69 46 49 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 24:41:37:a4:05:40
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -66 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -94 dBm
+  Address: 79:86:f0:4d:e5:55
+  Advertising Data: 1a ff 4c 00 02 15 50 76 5c b7 d9 ea 4e 21 99 a4 fa 87 96 13 a4 92 ac 81 26 d9 ce 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -93 dBm
+  Address: 68:e4:d5:8f:36:ef
+  Advertising Data: 02 01 02 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 2a:61:6d:00:e8:3c
+  Advertising Data: 02 01 1a 0b ff 4c 00 09 06 03 90 ac 10 01 9d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 6c:ed:15:e1:8a:f1
+  Advertising Data: 02 01 1a 02 0a 0c 0b ff 4c 00 10 06 4d 1d 0e 63 42 68 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -60 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -76 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -60 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 79:86:f0:4d:e5:55
+  Advertising Data: 1a ff 4c 00 02 15 50 76 5c b7 d9 ea 4e 21 99 a4 fa 87 96 13 a4 92 ac 81 26 d9 ce 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -65 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -44 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -63 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -67 dBm
+  Address: 06:e7:d9:1a:83:4d
+  Advertising Data: 1e ff 06 00 01 0f 20 22 28 6d 03 e0 63 e8 7f 93 7a a4 aa d6 58 b6 7f a4 52 3f 15 db 35 a2 1e 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -81 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -81 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -67 dBm
+  Address: 5b:2a:1b:3e:23:88
+  Advertising Data: 02 01 06 07 03 0d 18 0f 18 05 18 11 07 f0 de bc 9a 78 56 34 12 78 56 34 12 78 56 34 12 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -91 dBm
+  Address: 53:66:2a:8d:f9:a2
+  Advertising Data: 1e ff 06 00 01 09 20 02 1e 2c dd 90 e7 ff 33 5d 34 f9 c6 7c 92 19 b9 6e 9c b2 58 43 82 a9 74 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -83 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -75 dBm
+  Address: 71:88:3b:04:76:bc
+  Advertising Data: 02 01 1a 02 0a 0c 0a ff 4c 00 10 05 07 1c 69 46 49 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -44 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -55 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -95 dBm
+  Address: 74:3e:55:51:ab:d2
+  Advertising Data: 02 01 02 0e ff 75 00 01 00 02 00 01 03 ff 00 00 43 01 03 19 c0 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -72 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -77 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -63 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: e6:a5:48:e6:dd:4a
+  Advertising Data: 02 01 06 03 02 01 a2 0c 16 01 a2 00 ec 01 35 0c bd b6 fb 5c 00 00 00 00 00 00 00 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -89 dBm
+  Address: 54:70:50:98:6c:4c
+  Advertising Data: 02 01 1a 1a ff 4c 00 0c 0e 00 bd 09 5e 4c 95 f1 2a 53 58 d8 eb 39 ec 10 05 05 1c 8e 9b 75 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -90 dBm
+  Address: 2a:61:6d:00:e8:3c
+  Advertising Data: 02 01 1a 0b ff 4c 00 09 06 03 90 ac 10 01 9d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 49:5e:54:93:8f:e7
+  Advertising Data: 1d ff 2d 01 02 00 01 10 97 81 a4 f0 0c 77 4d b1 aa 1e bc a2 b0 7b be f0 c5 a1 6d 32 22 51 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -85 dBm
+  Address: 15:61:03:c7:e6:9e
+  Advertising Data: 1e ff 06 00 01 09 20 22 0f c3 38 e8 eb 64 8a 47 9a 5a 7d 58 bd aa ae f2 c5 1c 9d c5 23 6c 36 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -74 dBm
+  Address: c4:d5:60:c7:20:7b
+  Advertising Data: 02 01 18 1b ff 75 00 42 09 81 02 14 15 03 21 01 49 44 17 01 2a 05 bc bf 38 00 00 00 00 cd 00 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -58 dBm
+  Address: 36:78:ef:d6:a5:4f
+  Advertising Data: 1e ff 06 00 01 09 20 02 64 53 19 7c 28 ca f3 c3 81 2f 0a 22 d0 39 76 62 2b 83 a0 6d a2 40 13 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -66 dBm
+  Address: 3f:c8:27:e9:21:ba
+  Advertising Data: 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -79 dBm
+  Address: 26:81:16:a2:45:85
+  Advertising Data: 1e ff 06 00 01 09 20 22 55 ed 18 06 b4 ba a2 63 9c 13 e1 9c 50 a4 24 ba 67 c1 21 9b 11 50 c7 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -62 dBm
+  Address: 73:69:b9:91:dc:a7
+  Advertising Data: 1e ff 06 00 01 09 20 02 b2 ff 23 7c f2 4f b0 eb 0e 7e c3 ff cd 7d 74 b8 f5 63 14 84 69 31 3d 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -92 dBm
+  Address: 79:86:f0:4d:e5:55
+  Advertising Data: 1a ff 4c 00 02 15 50 76 5c b7 d9 ea 4e 21 99 a4 fa 87 96 13 a4 92 ac 81 26 d9 ce 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -88 dBm
+  Address: 63:3a:3e:43:d1:15
+  Advertising Data: 02 01 1a 17 ff 4c 00 09 08 13 22 c0 a8 00 38 1b 58 16 08 00 27 22 5e 6d ed f2 a5 
+  Device Name: N/A
+Received BLE advertising packet:
+  RSSI: -87 dBm
+  Address: 00:16:a4:d2:23:ab
+  Advertising Data: 02 01 04 11 07 79 49 b0 22 98 0c a3 97 2d 44 2a ac 28 d8 c5 48 06 ff 00 06 43 69 33 
+  Device Name: N/A

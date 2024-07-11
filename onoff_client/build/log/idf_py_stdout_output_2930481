@@ -1,0 +1,333 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  3 2024 18:42:25[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42120020 size=3bd80h (245120) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004bda8 vaddr=40800000 size=04270h ( 17008) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=11975ch (1152860) map[0m
+[0;32mI (400) esp_image: segment 3: paddr=00169784 vaddr=40804270 size=192dch (103132) load[0m
+[0;32mI (425) esp_image: segment 4: paddr=00182a68 vaddr=4081d550 size=03c34h ( 15412) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (437) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Unicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     spp_client_demo[0m
+[0;32mI (466) app_init: App version:      1[0m
+[0;32mI (470) app_init: Compile time:     Jul  4 2024 16:20:28[0m
+[0;32mI (476) app_init: ELF file SHA256:  d3c127fb4...[0m
+[0;32mI (482) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (489) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (493) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (503) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (510) heap_init: At 40829810 len 00052E00 (331 KiB): RAM[0m
+[0;32mI (516) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (522) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (530) spi_flash: detected chip: generic[0m
+[0;32mI (533) spi_flash: flash io: dio[0m
+[0;32mI (538) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (544) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (551) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (579) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (590) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (590) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (590) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (630) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (640) GATTC_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (650) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (650) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (650) GATTC_SPP_DEMO: EVT 0, gY�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  3 2024 18:42:25[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42120020 size=3bd80h (245120) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004bda8 vaddr=40800000 size=04270h ( 17008) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=11975ch (1152860) map[0m
+[0;32mI (400) esp_image: segment 3: paddr=00169784 vaddr=40804270 size=192dch (103132) load[0m
+[0;32mI (425) esp_image: segment 4: paddr=00182a68 vaddr=4081d550 size=03c34h ( 15412) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (437) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Unicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     spp_client_demo[0m
+[0;32mI (466) app_init: App version:      1[0m
+[0;32mI (470) app_init: Compile time:     Jul  4 2024 16:20:28[0m
+[0;32mI (476) app_init: ELF file SHA256:  d3c127fb4...[0m
+[0;32mI (482) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (489) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (493) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (503) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (510) heap_init: At 40829810 len 00052E00 (331 KiB): RAM[0m
+[0;32mI (516) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (522) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (530) spi_flash: detected chip: generic[0m
+[0;32mI (533) spi_flash: flash io: dio[0m
+[0;32mI (538) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (544) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (551) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (579) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (590) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (590) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (590) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (630) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (630) GATTC_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (650) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (650) GATTC_SPP_DEMO: register callback[0m
+[0;32mI (650) GATTC_SPP_DEMO: EVT 0, g��[0;32mI (5660) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (5660) net80211: net80211 rom version: 5b8dcfa[0m
+I (5670) wifi:wifi driver task: 40842764, prio:23, stack:6656, core=0
+I (5670) wifi:wifi firmware version: eb97ced
+I (5670) wifi:wifi certification version: v7.0
+I (5670) wifi:config NVS flash: enabled
+I (5670) wifi:config nano formating: disabled
+I (5680) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1
+I (5680) wifi:Init data frame dynamic rx buffer num: 32
+I (5690) wifi:Init static rx mgmt buffer num: 5
+I (5690) wifi:Init management short buffer num: 32
+I (5700) wifi:Init dynamic tx buffer num: 32
+I (5700) wifi:Init static tx FG buffer num: 2
+I (5710) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)
+I (5710) wifi:Init static rx buffer num: 10
+I (5710) wifi:Init dynamic rx buffer num: 32
+[0;32mI (5720) wifi_init: rx ba win: 6[0m
+[0;32mI (5720) wifi_init: accept mbox: 6[0m
+[0;32mI (5730) wifi_init: tcpip mbox: 32[0m
+[0;32mI (5730) wifi_init: udp mbox: 6[0m
+[0;32mI (5730) wifi_init: tcp mbox: 6[0m
+[0;32mI (5740) wifi_init: tcp tx win: 5760[0m
+[0;32mI (5740) wifi_init: tcp rx win: 5760[0m
+[0;32mI (5750) wifi_init: tcp mss: 1440[0m
+[0;32mI (5750) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (5760) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (5760) wifi_init: WiFi SLP IRAM OP enabled[0m
+W (5830) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (5830) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (5840) wifi:(agc)0x600a7128:0xd211ca28, min.avgNF:0xce->0xd2(dB), RCalCount:0x11c, min.RRssi:0xa28(-93.50)
+W (5850) wifi:(TB)WDEV_PWR_TB_MCS0:19
+W (5850) wifi:(TB)WDEV_PWR_TB_MCS1:19
+W (5850) wifi:(TB)WDEV_PWR_TB_MCS2:19
+W (5860) wifi:(TB)WDEV_PWR_TB_MCS3:19
+W (5860) wifi:(TB)WDEV_PWR_TB_MCS4:19
+W (5860) wifi:(TB)WDEV_PWR_TB_MCS5:19
+W (5870) wifi:(TB)WDEV_PWR_TB_MCS6:18
+W (5870) wifi:(TB)WDEV_PWR_TB_MCS7:18
+W (5870) wifi:(TB)WDEV_PWR_TB_MCS8:17
+W (5880) wifi:(TB)WDEV_PWR_TB_MCS9:15
+W (5880) wifi:(TB)WDEV_PWR_TB_MCS10:15
+W (5880) wifi:(TB)WDEV_PWR_TB_MCS11:15
+I (5890) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).
+
+W (5890) wifi:(he)attach, station, phymode:11ax
+I (5900) wifi:mode : sta (54:32:04:07:2d:14)
+I (5900) wifi:enable tsf
+[0;32mI (5910) WIFI_DEMO: wifi_init_sta finished.[0m
+I (6220) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (6220) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3
+I (6220) wifi:state: init -> auth (0xb0)
+I (6230) wifi:state: auth -> assoc (0x0)
+I (6240) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0
+I (6240) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0
+I (6250) wifi:Extended Capabilities length:8, operating_mode_notification:1
+I (6260) wifi:state: assoc -> run (0x10)
+I (6260) wifi:(trc)phytype:CBW20-SGI, snr:78, maxRate:144, highestRateIdx:0
+W (6270) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14
+I (6280) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:78, ampduState:wait operational
+I (6290) wifi:ifidx:0, rssi:-18, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1
+I (6300) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)
+I (6320) wifi:connected with Galaxy A53 5G CA17, aid = 2, channel 11, BW20, bssid = 02:0b:b3:1a:c6:27
+I (6320) wifi:cipher(pairwise:0x3, group:0x3), pmf:0, security:WPA2-PSK, phy:11bgn, rssi:-18
+I (6330) wifi:pm start, type: 1, twt_start:0
+
+I (6330) wifi:pm start, type:1, aid:0x2, trans-BSSID:02:0b:b3:1a:c6:27, BSSID[5]:0x27, mbssid(max-indicator:0, index:0), he:0
+I (6340) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (6350) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000
+I (6350) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (6360) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)
+I (6380) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+W (6390) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x10027c6, TALO:0x1ab30b02, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005
+I (6400) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (6400) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (6410) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (6420) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (6430) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+[0;32mI (7440) esp_netif_handlers: sta ip: 192.168.255.210, mask: 255.255.255.0, gw: 192.168.255.194[0m
+[0;32mI (7440) WIFI_DEMO: got ip:192.168.255.210[0m
+[0;32mI (7440) WIFI_DEMO: connected to ap SSID:Galaxy A53 5G CA17 password:mperko12[0m
+[0;32mI (7710) WIFI_DEMO: Successfully connected to server[0m
+[0;32mI (7710) WIFI_DEMO: JSON message sent successfully: {"event":"init","serial":"213124"}[0m
+[0;32mI (7720) main_task: Returned from app_main()[0m
+[0;32mI (88190) WIFI_DEMO: Received message: {"event": "scan"}
+[0m
+[0;32mI (88190) GATTC_SPP_DEMO: Enable Ble Scan:during time ffff minutes.[0m
+[0;32mI (88190) GATTC_SPP_DEMO: Scan start successfully[0m
+[0;32mI (88350) GATTC_SPP_DEMO: 6e 38 ad ef e4 99[0m
+[0;32mI (88350) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88350) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88360) GATTC_SPP_DEMO:  [0m
+[0;32mI (88360) GATTC_SPP_DEMO: 1d d4 39 5d 36 f9[0m
+[0;32mI (88370) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88370) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88380) GATTC_SPP_DEMO:  [0m
+[0;32mI (88380) GATTC_SPP_DEMO: 0a 00 69 2d 6b f0[0m
+[0;32mI (88390) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88390) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88400) GATTC_SPP_DEMO:  [0m
+[0;32mI (88400) GATTC_SPP_DEMO: 21 cc 20 ab f9 27[0m
+[0;32mI (88410) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88410) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88420) GATTC_SPP_DEMO:  [0m
+[0;32mI (88420) GATTC_SPP_DEMO: 5f 1b fb ca dc a6[0m
+[0;32mI (88430) GATTC_SPP_DEMO: Searched Adv Data Len 30, Scan Response Len 0[0m
+[0;32mI (88440) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88440) GATTC_SPP_DEMO:  [0m
+[0;32mI (88440) GATTC_SPP_DEMO: 68 c2 3d 39 48 07[0m
+[0;32mI (88450) GATTC_SPP_DEMO: Searched Adv Data Len 16, Scan Response Len 0[0m
+[0;32mI (88460) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88460) GATTC_SPP_DEMO:  [0m
+[0;32mI (88470) GATTC_SPP_DEMO: 6e 38 ad ef e4 99[0m
+[0;32mI (88470) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88480) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88480) GATTC_SPP_DEMO:  [0m
+[0;32mI (88490) GATTC_SPP_DEMO: 1d d4 39 5d 36 f9[0m
+[0;32mI (88490) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88500) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88510) GATTC_SPP_DEMO:  [0m
+[0;32mI (88510) GATTC_SPP_DEMO: 0a 00 69 2d 6b f0[0m
+[0;32mI (88510) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88520) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88530) GATTC_SPP_DEMO:  [0m
+[0;32mI (88530) GATTC_SPP_DEMO: 21 cc 20 ab f9 27[0m
+[0;32mI (88530) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88540) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88550) GATTC_SPP_DEMO:  [0m
+[0;32mI (88560) GATTC_SPP_DEMO: 1d d4 39 5d 36 f9[0m
+[0;32mI (88560) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88560) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88570) GATTC_SPP_DEMO:  [0m
+[0;32mI (88570) GATTC_SPP_DEMO: 6e 38 ad ef e4 99[0m
+[0;32mI (88580) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88580) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88590) GATTC_SPP_DEMO:  [0m
+[0;32mI (88590) GATTC_SPP_DEMO: 0a 00 69 2d 6b f0[0m
+[0;32mI (88600) GATTC_SPP_DEMO: Searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (88610) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88610) GATTC_SPP_DEMO:  [0m
+[0;32mI (88620) GATTC_SPP_DEMO: 62 e0 53 ba 4d e9[0m
+[0;32mI (88620) GATTC_SPP_DEMO: Searched Adv Data Len 27, Scan Response Len 0[0m
+[0;32mI (88630) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88630) GATTC_SPP_DEMO:  [0m
+[0;32mI (88640) GATTC_SPP_DEMO: 40 4c ca 45 4c 2a[0m
+[0;32mI (88640) GATTC_SPP_DEMO: Searched Adv Data Len 23, Scan Response Len 0[0m
+[0;32mI (88650) GATTC_SPP_DEMO: Searched Device Name Len 14[0m
+[0;32mI (88650) GATTC_SPP_DEMO: ESP_SPP_SERVER[0m
+[0;32mI (88660) GATTC_SPP_DEMO:  [0m
+[0;32mI (88660) GATTC_SPP_DEMO: Scan stop successfully[0m
+[0;32mI (88670) GATTC_SPP_DEMO: Connect to the remote device.[0m
+[0;32mI (88680) GATTC_SPP_DEMO: 4b d9 d5 19 7c 7d[0m
+[0;32mI (88680) GATTC_SPP_DEMO: Searched Adv Data Len 17, Scan Response Len 0[0m
+[0;32mI (88690) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88690) GATTC_SPP_DEMO:  [0m
+[0;32mI (88700) GATTC_SPP_DEMO: 68 c2 3d 39 48 07[0m
+[0;32mI (88700) GATTC_SPP_DEMO: Searched Adv Data Len 9, Scan Response Len 0[0m
+[0;32mI (88710) GATTC_SPP_DEMO: Searched Device Name Len 0[0m
+[0;32mI (88710) GATTC_SPP_DEMO:  [0m
+[0;32mI (88800) GATTC_SPP_DEMO: EVT 40, gattc if 3[0m
+[0;32mI (88800) GATTC_SPP_DEMO: ESP_GATTC_CONNECT_EVT: conn_id=0, gatt_if = 3[0m
+[0;32mI (88800) GATTC_SPP_DEMO: REMOTE BDA:[0m
+[0;32mI (88800) GATTC_SPP_DEMO: 00 00 00 00 00 00[0m
+[0;32mI (88810) GATTC_SPP_DEMO: EVT 2, gattc if 3[0m
+[0;32mI (89670) GATTC_SPP_DEMO: EVT 46, gattc if 3[0m
+[0;32mI (89670) GATTC_SPP_DEMO: EVT 7, gattc if 3[0m
+[0;32mI (89670) GATTC_SPP_DEMO: ESP_GATTC_SEARCH_RES_EVT: start_handle = 40, end_handle = 65535, UUID:0xabf0[0m
+[0;32mI (89680) GATTC_SPP_DEMO: EVT 6, gattc if 3[0m
+[0;32mI (89690) GATTC_SPP_DEMO: SEARCH_CMPL: conn_id = 0, status 0[0m
+[0;32mI (89800) GATTC_SPP_DEMO: EVT 18, gattc if 3[0m
+[0;32mI (89800) GATTC_SPP_DEMO: +MTU:200[0m
+[0;32mI (89800) GATTC_SPP_DEMO: attr_type = PRIMARY_SERVICE,attribute_handle=40,start_handle=40,end_handle=65535,properties=0x0,uuid=0xabf0[0m
+[0;32mI (89810) GATTC_SPP_DEMO: attr_type = CHARACTERISTIC,attribute_handle=42,start_handle=0,end_handle=0,properties=0x6,uuid=0xabf1[0m
+[0;32mI (89820) GATTC_SPP_DEMO: attr_type = CHARACTERISTIC,attribute_handle=44,start_handle=0,end_handle=0,properties=0x12,uuid=0xabf2[0m
+[0;32mI (89830) GATTC_SPP_DEMO: attr_type = DESCRIPTOR,attribute_handle=45,start_handle=0,end_handle=0,properties=0x0,uuid=0x2902[0m
+[0;32mI (89840) GATTC_SPP_DEMO: attr_type = CHARACTERISTIC,attribute_handle=47,start_handle=0,end_handle=0,properties=0x6,uuid=0xabf6[0m
+[0;32mI (89850) GATTC_SPP_DEMO: attr_type = CHARACTERISTIC,attribute_handle=49,start_handle=0,end_handle=0,properties=0x6,uuid=0xabf7[0m
+[0;32mI (89870) GATTC_SPP_DEMO: attr_type = CHARACTERISTIC,attribute_handle=51,start_handle=0,end_handle=0,properties=0x6,uuid=0xabf3[0m
+[0;32mI (89880) GATTC_SPP_DEMO: Index = 2,UUID = 0xabf2, handle = 44[0m
+[0;32mI (89890) GATTC_SPP_DEMO: EVT 38, gattc if 3[0m
+[0;32mI (89890) GATTC_SPP_DEMO: Index = 2,status = 0,handle = 44[0m
+[0;32mI (89950) GATTC_SPP_DEMO: EVT 9, gattc if 3[0m
+[0;32mI (89950) GATTC_SPP_DEMO: ESP_GATTC_WRITE_DESCR_EVT: status =0,handle = 45[0m
+[0;32mI (90000) GATTC_SPP_DEMO: Index = 5,UUID = 0xabf7, handle = 49[0m
+[0;32mI (90000) GATTC_SPP_DEMO: EVT 38, gattc if 3[0m
+[0;32mI (90000) GATTC_SPP_DEMO: Index = 5,status = 0,handle = 49[0m
+[0;32mI (90050) GATTC_SPP_DEMO: EVT 9, gattc if 3[0m
+[0;32mI (90050) GATTC_SPP_DEMO: ESP_GATTC_WRITE_DESCR_EVT: status =0,handle = 51[0m
+[0;32mI (93310) WIFI_DEMO: Received message: {"event": "on", "cluster": "11111"}
+[0m
+[0;32mI (93310) WIFI_DEMO: Received 'on' event for cluster '11111'[0m
+sakhen[0;32mI (93310) BLE: Successfully wrote LED ON command[0m
+[0;32mI (93400) GATTC_SPP_DEMO: EVT 4, gattc if 3[0m
+[0;32mI (93400) GATTC_SPP_DEMO: ESP_GATTC_WRITE_CHAR_EVT:status = 0,handle = 47[0m
+[0;32mI (94750) WIFI_DEMO: Received message: {"event": "off", "cluster": "11111"}
+[0m
+[0;32mI (94750) WIFI_DEMO: Received 'off' event for cluster '11111'[0m
+sakhen[0;32mI (94750) BLE: Successfully wrote LED ON command[0m
+[0;32mI (94820) GATTC_SPP_DEMO: EVT 4, gattc if 3[0m
+[0;32mI (94820) GATTC_SPP_DEMO: ESP_GATTC_WRITE_CHAR_EVT:status = 0,handle = 47[0m
+[0;32mI (96180) WIFI_DEMO: Received message: {"event": "get", "cluster": "11111"}
+[0m
+[0;32mI (96180) BLE: Successfully initiated read characteristic[0m
+[0;32mI (96250) GATTC_SPP_DEMO: EVT 3, gattc if 3[0m
+[0;32mI (96250) GATTC_SPP_DEMO: ESP_GATTC_READ_CHAR_EVT[0m
+[0;32mI (100070) WIFI_DEMO: Received message: {"event": "get", "cluster": "11111"}
+[0m
+[0;32mI (100070) BLE: Successfully initiated read characteristic[0m
+[0;32mI (100150) GATTC_SPP_DEMO: EVT 3, gattc if 3[0m
+[0;32mI (100150) GATTC_SPP_DEMO: ESP_GATTC_READ_CHAR_EVT[0m

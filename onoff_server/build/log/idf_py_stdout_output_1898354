@@ -1,0 +1,77 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=3d824h (251940) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0004d84c vaddr=40800000 size=027cch ( 10188) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=f1f18h (991000) map[0m
+[0;32mI (368) esp_image: segment 3: paddr=00141f40 vaddr=408027cc size=10688h ( 67208) load[0m
+[0;32mI (385) esp_image: segment 4: paddr=001525d0 vaddr=40812e60 size=03094h ( 12436) load[0m
+[0;32mI (393) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (393) boot: Disabling RNG early entropy source...[0m
+[0;32mI (405) cpu_start: Unicore app[0m
+[0;32mI (414) cpu_start: Pro cpu start user code[0m
+[0;32mI (414) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (414) app_init: Application information:[0m
+[0;32mI (417) app_init: Project name:     onoff_server[0m
+[0;32mI (422) app_init: App version:      1[0m
+[0;32mI (427) app_init: Compile time:     Jul  3 2024 14:41:02[0m
+[0;32mI (433) app_init: ELF file SHA256:  72f5c2e92...[0m
+[0;32mI (438) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (445) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (450) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (454) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (459) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (466) heap_init: At 4081E470 len 0005E1A0 (376 KiB): RAM[0m
+[0;32mI (473) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (479) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (486) spi_flash: detected chip: generic[0m
+[0;32mI (490) spi_flash: flash io: dio[0m
+[0;33mW (494) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (507) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (514) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (521) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (535) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (536) main_task: Started on CPU0[0m
+[0;32mI (536) main_task: Calling app_main()[0m
+[0;32mI (536) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (546) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (556) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;33mW (566) BOARD: led red is already off[0m
+[0;32mI (576) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (586) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (586) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (626) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;32mI (626) GATTS_SPP_DEMO: app_main init bluetooth[0m
+[0;31mE (636) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+[0;32mI (646) GATTS_SPP_DEMO: EVT 0, gatts if 3[0m
+[0;32mI (646) GATTS_SPP_DEMO: event = 0[0m
+[0;32mI (646) GATTS_SPP_DEMO: gatts_profile_event_handler 509[0m
+[0;32mI (656) GATTS_SPP_DEMO: gatts_profile_event_handler 512[0m
+[0;32mI (656) GATTS_SPP_DEMO: gatts_profile_event_handler 515[0m
+[0;32mI (666) GATTS_SPP_DEMO: EVT 22, gatts if 3[0m
+[0;32mI (666) GATTS_SPP_DEMO: event = 16[0m
+[0;32mI (676) GATTS_SPP_DEMO: The number handle =b[0m
+[0;32mI (676) GATTS_SPP_DEMO: GAP_EVT, event 4[0m
+[0;32mI (686) GATTS_SPP_DEMO: EVT 12, gatts if 3[0m
+[0;32mI (686) GATTS_SPP�[0;32mI (706) main_task: Returned from app_main()[0m

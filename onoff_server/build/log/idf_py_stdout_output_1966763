@@ -1,0 +1,154 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x1804
+load:0x4086c110,len:0xe2c
+load:0x4086e610,len:0x2e44
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4-dev-826-g8760e6d2a7-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 20 2024 13:27:43[0m
+[0;32mI (25) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (66) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42160020 size=4b75ch (309084) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=0005b784 vaddr=40800000 size=04894h ( 18580) load[0m
+[0;32mI (175) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=150680h (1377920) map[0m
+[0;32mI (460) esp_image: segment 3: paddr=001b06a8 vaddr=40804894 size=17b84h ( 97156) load[0m
+[0;32mI (483) esp_image: segment 4: paddr=001c8234 vaddr=4081c420 size=0458ch ( 17804) load[0m
+[0;32mI (495) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (495) boot: Disabling RNG early entropy source...[0m
+[0;32mI (507) cpu_start: Unicore app[0m
+[0;32mI (516) cpu_start: Pro cpu start user code[0m
+[0;32mI (516) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (517) app_init: Application information:[0m
+[0;32mI (519) app_init: Project name:     onoff_server[0m
+[0;32mI (524) app_init: App version:      1[0m
+[0;32mI (529) app_init: Compile time:     Jun 24 2024 14:35:53[0m
+[0;32mI (535) app_init: ELF file SHA256:  7aab61261...[0m
+[0;32mI (540) app_init: ESP-IDF:          v5.4-dev-826-g8760e6d2a7-dirty[0m
+[0;32mI (547) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (552) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (557) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (561) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (569) heap_init: At 4082C090 len 00050580 (321 KiB): RAM[0m
+[0;32mI (575) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (581) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (592) spi_flash: flash io: dio[0m
+[0;32mI (596) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (603) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (610) coexist: coex firmware version: 66616e60c[0m
+[0;32mI (637) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (638) main_task: Started on CPU0[0m
+[0;32mI (638) main_task: Calling app_main()[0m
+[0;32mI (638) EXAMPLE: Initializing...[0m
+[0;32mI (638) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (648) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (678) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (678) BLE_INIT: ble controller commit:[2c20dce][0m
+[0;32mI (678) phy_init: phy_version 290,81efd96,May  8 2024,10:42:13[0m
+[0;32mI (728) phy: libbtbb version: f97b181, May  8 2024, 10:42:29[0m
+[0;31mE (738) BT_BTM: btm_ble_remove_resolving_list_entry_complete no pending resolving list operation[0m
+Bluetooth Mesh v1.1 commit: [10f7fdc1a9]
+[0;32mI (798) EXAMPLE: ESP_BLE_MESH_PROV_REGISTER_COMP_EVT, err_code 0[0m
+[0;32mI (798) EXAMPLE: ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT, err_code 0[0m
+[0;32mI (798) EXAMPLE: BLE Mesh Node initialized[0m
+[0;32mI (798) EXAMPLE: ESP_WIFI_MODE_STA[0m
+[0;32mI (808) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (808) net80211: net80211 rom version: 5b8dcfa[0m
+I (828) wifi:wifi driver task: 408439e4, prio:23, stack:6656, core=0
+I (828) wifi:wifi firmware version: eb97ced
+I (828) wifi:wifi certification version: v7.0
+I (828) wifi:config NVS flash: enabled
+I (838) wifi:config nano formating: disabled
+I (838) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1
+I (848) wifi:Init data frame dynamic rx buffer num: 32
+I (848) wifi:Init static rx mgmt buffer num: 5
+I (848) wifi:Init management short buffer num: 32
+I (858) wifi:Init dynamic tx buffer num: 32
+I (858) wifi:Init static tx FG buffer num: 2
+I (868) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)
+I (868) wifi:Init static rx buffer num: 10
+I (878) wifi:Init dynamic rx buffer num: 32
+[0;32mI (878) wifi_init: rx ba win: 6[0m
+[0;32mI (878) wifi_init: accept mbox: 6[0m
+[0;32mI (888) wifi_init: tcpip mbox: 32[0m
+[0;32mI (888) wifi_init: udp mbox: 6[0m
+[0;32mI (898) wifi_init: tcp mbox: 6[0m
+[0;32mI (898) wifi_init: tcp tx win: 5760[0m
+[0;32mI (898) wifi_init: tcp rx win: 5760[0m
+[0;32mI (908) wifi_init: tcp mss: 1440[0m
+[0;32mI (908) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (918) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (918) wifi_init: WiFi SLP IRAM OP enabled[0m
+W (948) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (948) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)
+W (948) wifi:(agc)0x600a7128:0xd21e9a24, min.avgNF:0xce->0xd2(dB), RCalCount:0x1e9, min.RRssi:0xa24(-93.75)
+W (958) wifi:(TB)WDEV_PWR_TB_MCS0:19
+W (958) wifi:(TB)WDEV_PWR_TB_MCS1:19
+W (968) wifi:(TB)WDEV_PWR_TB_MCS2:19
+W (968) wifi:(TB)WDEV_PWR_TB_MCS3:19
+W (968) wifi:(TB)WDEV_PWR_TB_MCS4:19
+W (978) wifi:(TB)WDEV_PWR_TB_MCS5:19
+W (978) wifi:(TB)WDEV_PWR_TB_MCS6:18
+W (978) wifi:(TB)WDEV_PWR_TB_MCS7:18
+W (988) wifi:(TB)WDEV_PWR_TB_MCS8:17
+W (988) wifi:(TB)WDEV_PWR_TB_MCS9:15
+W (988) wifi:(TB)WDEV_PWR_TB_MCS10:15
+W (998) wifi:(TB)WDEV_PWR_TB_MCS11:15
+I (998) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).
+
+W (1008) wifi:(he)attach, station, phymode:11ax
+I (1008) wifi:mode : sta (54:32:04:07:2d:14)
+I (1018) wifi:enable tsf
+[0;32mI (1018) EXAMPLE: wifi_init_sta finished.[0m
+I (1338) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (1338) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1
+I (1338) wifi:state: init -> auth (0xb0)
+I (1348) wifi:state: auth -> assoc (0x0)
+I (1368) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0
+I (1368) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0
+I (1378) wifi:Extended Capabilities length:8, operating_mode_notification:1
+I (1388) wifi:state: assoc -> run (0x10)
+I (1388) wifi:(trc)phytype:CBW20-SGI, snr:37, maxRate:144, highestRateIdx:0
+W (1398) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14
+I (1408) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:37, ampduState:wait operational
+I (1418) wifi:ifidx:0, rssi:-59, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1
+I (1428) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)
+I (1448) wifi:connected with zipato-xxx, aid = 25, channel 11, BW20, bssid = 04:18:d6:a9:8f:e1
+I (1448) wifi:cipher(pairwise:0x3, group:0x1), pmf:0, security:WPA2-PSK, phy:11bgn, rssi:-59
+I (1468) wifi:pm start, type: 1, twt_start:0
+
+I (1468) wifi:pm start, type:1, aid:0x19, trans-BSSID:04:18:d6:a9:8f:e1, BSSID[5]:0xe1, mbssid(max-indicator:0, index:0), he:0
+I (1468) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1478) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000
+I (1488) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (1498) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)
+I (1508) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)
+I (1518) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1578) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (1578) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+I (1588) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64
+W (1608) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100e18f, TALO:0xa9d61804, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005
+[0;32mI (2528) esp_netif_handlers: sta ip: 172.16.18.151, mask: 255.255.252.0, gw: 172.16.16.1[0m
+[0;32mI (2528) EXAMPLE: got ip:172.16.18.151[0m
+[0;32mI (2528) EXAMPLE: connected to ap SSID:zipato-xxx password:87654321[0m
+[0;32mI (2538) EXAMPLE: Successfully connected to server[0m
+[0;32mI (2548) EXAMPLE: JSON message sent successfully: {"type":"data","content":"Hello, Server!"}[0m
+[0;32mI (2548) main_task: Returned from app_main()[0m
+I (5068) wifi:[ADDBA]RX DELBA, reason:39, delete tid:5, initiator:0(recipient)
+I (20128) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)
+I (20128) wifi:[ADDBA]RX DELBA, reason:39, delete tid:7, initiator:0(recipient)
