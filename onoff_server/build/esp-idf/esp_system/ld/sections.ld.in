@@ -34,6 +34,10 @@ SECTIONS
    */
   .rtc.text :
   {
+    /* Align the start of RTC code region as per PMP granularity
+     * this ensures we do not overwrite the permissions for the previous
+     * region (ULP mem) regardless of its end alignment
+     */
     
  . = ALIGN(4); 
  _rtc_fast_start = ABSOLUTE(.);
@@ -44,9 +48,9 @@ SECTIONS
     mapping[rtc_text]
     *rtc_wake_stub*.*(.text .text.*)
     *(.rtc_text_end_test)
-    
- . = ALIGN(4); 
- _rtc_text_end = ABSOLUTE(.);
+    /* Align the end of RTC code region as per PMP granularity */
+    . = ALIGN(4);
+    _rtc_text_end = ABSOLUTE(.);
   } > lp_ram_seg
   /**
    * This section located in RTC FAST Memory area.

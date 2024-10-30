@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/freertos
+# Install script for directory: /home/mperko/esp2/esp-idf/components/freertos
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

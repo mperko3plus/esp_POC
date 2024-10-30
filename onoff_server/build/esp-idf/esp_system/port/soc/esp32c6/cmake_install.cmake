@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/esp_system/port/soc/esp32c6
+# Install script for directory: /home/mperko/esp2/esp-idf/components/esp_system/port/soc/esp32c6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

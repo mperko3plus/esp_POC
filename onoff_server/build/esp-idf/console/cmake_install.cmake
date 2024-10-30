@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/console
+# Install script for directory: /home/mperko/esp2/esp-idf/components/console
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/example_init
+# Install script for directory: /home/mperko/esp2/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/example_init
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

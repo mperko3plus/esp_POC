@@ -1,5 +1,0 @@
-[0/1] Re-running CMake...
--- Configuring incomplete, errors occurred!
-See also "/home/mperko/bleesp/onoff_server/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/mperko/bleesp/onoff_server -B/home/mperko/bleesp/onoff_server/build

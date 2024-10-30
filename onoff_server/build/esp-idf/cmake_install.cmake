@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf
+# Install script for directory: /home/mperko/esp2/esp-idf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -399,6 +399,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/mperko/bleesp/onoff_server/build/esp-idf/esp_eth/cmake_install.cmake")
 endif()
 
@@ -505,6 +510,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/mperko/bleesp/onoff_server/build/esp-idf/openthread/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/mperko/bleesp/onoff_server/build/esp-idf/rt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

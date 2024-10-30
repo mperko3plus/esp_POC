@@ -38,6 +38,10 @@ SECTIONS
    */
   .rtc.text :
   {
+    /* Align the start of RTC code region as per PMP granularity
+     * this ensures we do not overwrite the permissions for the previous
+     * region (ULP mem) regardless of its end alignment
+     */
     
  . = ALIGN(4); 
  _rtc_fast_start = ABSOLUTE(.);
@@ -48,9 +52,9 @@ SECTIONS
     *(.rtc.literal .rtc.text .rtc.text.*)
     *rtc_wake_stub*.*(.text .text.*)
     *(.rtc_text_end_test)
-    
- . = ALIGN(4); 
- _rtc_text_end = ABSOLUTE(.);
+    /* Align the end of RTC code region as per PMP granularity */
+    . = ALIGN(4);
+    _rtc_text_end = ABSOLUTE(.);
   } > lp_ram_seg
   /**
    * This section located in RTC FAST Memory area.
@@ -495,7 +499,7 @@ SECTIONS
     *(EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifirxiram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifirxiram.*)
     *(EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifislpiram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifislpiram.*)
     *(EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifislprxiram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifislprxiram.*)
-    *libesp_driver_gptimer.a:gptimer.*(.text .text.gptimer_acquire_group_handle .text.gptimer_del_timer .text.gptimer_destroy .text.gptimer_disable .text.gptimer_enable .text.gptimer_get_captured_count .text.gptimer_get_raw_count .text.gptimer_get_resolution .text.gptimer_new_timer .text.gptimer_register_event_callbacks .text.gptimer_register_to_group .text.gptimer_release_group_handle .text.gptimer_select_periph_clock .text.gptimer_set_alarm_action .text.gptimer_set_raw_count .text.gptimer_start .text.gptimer_stop .text.gptimer_unregister_from_group .text.timer_ll_set_clock_prescale .text.timer_ll_set_clock_source)
+    *libesp_driver_gptimer.a:gptimer.*(.text .text.gptimer_del_timer .text.gptimer_destroy .text.gptimer_disable .text.gptimer_enable .text.gptimer_get_captured_count .text.gptimer_get_raw_count .text.gptimer_get_resolution .text.gptimer_new_timer .text.gptimer_register_event_callbacks .text.gptimer_register_to_group .text.gptimer_set_alarm_action .text.gptimer_set_raw_count .text.gptimer_start .text.gptimer_stop .text.gptimer_unregister_from_group)
     *libesp_event.a:default_event_loop.*(.text .text.esp_event_handler_instance_register .text.esp_event_handler_instance_unregister .text.esp_event_handler_register .text.esp_event_handler_unregister .text.esp_event_loop_create_default .text.esp_event_loop_delete_default .text.esp_event_post)
     *libesp_event.a:esp_event.*(.text .text.base_node_add_handler .text.base_node_remove_all_handler .text.base_node_remove_handler .text.esp_event_dump .text.esp_event_handler_instance_register_with .text.esp_event_handler_instance_unregister_with .text.esp_event_handler_register_with .text.esp_event_handler_register_with_internal .text.esp_event_handler_unregister_with .text.esp_event_handler_unregister_with_internal .text.esp_event_loop_create .text.esp_event_loop_delete .text.esp_event_loop_run .text.esp_event_loop_run_task .text.esp_event_post_to .text.handler_execute .text.handler_instances_add .text.handler_instances_remove .text.handler_instances_remove_all .text.loop_node_add_handler .text.loop_node_remove_all_handler .text.loop_node_remove_handler)
     *libesp_hw_support.a:cpu.*(.text .text.esp_cpu_clear_breakpoint .text.esp_cpu_clear_watchpoint .text.esp_cpu_set_breakpoint .text.esp_cpu_set_watchpoint)

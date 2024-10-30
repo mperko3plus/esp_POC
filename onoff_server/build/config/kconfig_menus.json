@@ -443,16 +443,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_APM_CTRL_FILTER_SUPPORTED",
-        "name": "SOC_APM_CTRL_FILTER_SUPPORTED",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_PMU_SUPPORTED",
         "name": "SOC_PMU_SUPPORTED",
         "range": null,
@@ -1043,6 +1033,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_CPU_PMP_REGION_GRANULARITY",
+        "name": "SOC_CPU_PMP_REGION_GRANULARITY",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_DS_SIGNATURE_MAX_BIT_LEN",
         "name": "SOC_DS_SIGNATURE_MAX_BIT_LEN",
         "range": null,
@@ -1245,6 +1245,16 @@
         "help": null,
         "id": "SOC_GPIO_DEEP_SLEEP_WAKE_VALID_GPIO_MASK",
         "name": "SOC_GPIO_DEEP_SLEEP_WAKE_VALID_GPIO_MASK",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_GPIO_DEEP_SLEEP_WAKE_SUPPORTED_PIN_CNT",
+        "name": "SOC_GPIO_DEEP_SLEEP_WAKE_SUPPORTED_PIN_CNT",
         "range": null,
         "title": null,
         "type": "int"
@@ -2823,6 +2833,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_MWDT_SUPPORT_SLEEP_RETENTION",
+        "name": "SOC_MWDT_SUPPORT_SLEEP_RETENTION",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_TWAI_CONTROLLER_NUM",
         "name": "SOC_TWAI_CONTROLLER_NUM",
         "range": null,
@@ -3015,6 +3035,26 @@
         "help": null,
         "id": "SOC_FLASH_ENCRYPTION_XTS_AES_128",
         "name": "SOC_FLASH_ENCRYPTION_XTS_AES_128",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_APM_CTRL_FILTER_SUPPORTED",
+        "name": "SOC_APM_CTRL_FILTER_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_APM_LP_APM0_SUPPORTED",
+        "name": "SOC_APM_LP_APM0_SUPPORTED",
         "range": null,
         "title": null,
         "type": "bool"
@@ -3733,6 +3773,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_LP_CORE_SUPPORT_ETM",
+        "name": "SOC_LP_CORE_SUPPORT_ETM",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_CMAKE",
         "name": "IDF_CMAKE",
         "range": null,
@@ -3803,6 +3853,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "IDF_TOOLCHAIN_GCC",
+        "name": "IDF_TOOLCHAIN_GCC",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_TARGET_ARCH_RISCV",
         "name": "IDF_TARGET_ARCH_RISCV",
         "range": null,
@@ -3848,16 +3908,6 @@
         "range": null,
         "title": null,
         "type": "string"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "IDF_TARGET_LINUX",
-        "name": "IDF_TARGET_LINUX",
-        "range": null,
-        "title": null,
-        "type": "bool"
     },
     {
         "children": [],
@@ -3928,36 +3978,6 @@
         "range": null,
         "title": null,
         "type": "bool"
-    },
-    {
-        "children": [
-            {
-                "children": [],
-                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
-                "help": null,
-                "id": "IDF_TARGET_ESP32C5_BETA3_VERSION",
-                "name": "IDF_TARGET_ESP32C5_BETA3_VERSION",
-                "range": null,
-                "title": "ESP32-C5 beta3",
-                "type": "bool"
-            },
-            {
-                "children": [],
-                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
-                "help": null,
-                "id": "IDF_TARGET_ESP32C5_MP_VERSION",
-                "name": "IDF_TARGET_ESP32C5_MP_VERSION",
-                "range": null,
-                "title": "ESP32-C5 MP",
-                "type": "bool"
-            }
-        ],
-        "depends_on": "IDF_TARGET_ESP32C5",
-        "help": "ESP32-C5 will support two versions for a period.\nThis option is for internal use only.\nSelect the one that matches your chip model.",
-        "id": "esp32-c5-version",
-        "name": "IDF_TARGET_ESP32C5_VERSION",
-        "title": "ESP32-C5 version",
-        "type": "choice"
     },
     {
         "children": [],
@@ -4328,7 +4348,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
@@ -4629,7 +4649,7 @@
             {
                 "children": [],
                 "depends_on": null,
-                "help": "Protects the unmapped memory regions of the entire address space from unintended accesses.\nThis will ensure that an exception will be triggered whenever the CPU performs a memory\noperation on unmapped regions of the address space.",
+                "help": "Protects the unmapped memory regions of the entire address space from unintended accesses.\nThis will ensure that an exception will be triggered whenever the CPU performs a memory\noperation on unmapped regions of the address space.\nNOTE: Disabling this config on some targets (ESP32-C6, ESP32-H2, ESP32-C5) would not generate\nan exception when reading from or writing to 0x0.",
                 "id": "BOOTLOADER_REGION_PROTECTION_ENABLE",
                 "name": "BOOTLOADER_REGION_PROTECTION_ENABLE",
                 "range": null,
@@ -4724,7 +4744,7 @@
             },
             {
                 "children": [],
-                "depends_on": "SOC_RTC_FAST_MEM_SUPPORTED && ((SECURE_BOOT && SECURE_BOOT_INSECURE) || !SECURE_BOOT)",
+                "depends_on": "(SECURE_BOOT && SECURE_BOOT_INSECURE) || !SECURE_BOOT",
                 "help": "This option disables the normal validation of an image coming out of\ndeep sleep (checksums, SHA256, and signature). This is a trade-off\nbetween wakeup performance from deep sleep, and image integrity checks.\n\nOnly enable this if you know what you are doing. It should not be used\nin conjunction with using deep_sleep() entry and changing the active OTA\npartition as this would skip the validation upon first load of the new\nOTA partition.\n\nIt is possible to enable this option with Secure Boot if \"allow insecure\noptions\" is enabled, however it's strongly recommended to NOT enable it as\nit may allow a Secure Boot bypass.",
                 "id": "BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP",
                 "name": "BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP",
@@ -5994,7 +6014,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SOC_MEMSPI_SRC_FREQ_80M_SUPPORTED && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "SOC_MEMSPI_SRC_FREQ_80M_SUPPORTED && !ESP32P4_REV_MIN_0 && <choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_80M",
                         "name": "ESPTOOLPY_FLASHFREQ_80M",
@@ -6378,6 +6398,16 @@
                         "name": "PARTITION_TABLE_TWO_OTA",
                         "range": null,
                         "title": "Factory app, two OTA definitions",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
+                        "help": "This is a basic OTA-enabled partition table with\ntwo OTA app partitions. Both app partition sizes are 1700K,\nso this partition table requires 4MB or larger flash size.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota_large.csv",
+                        "id": "PARTITION_TABLE_TWO_OTA_LARGE",
+                        "name": "PARTITION_TABLE_TWO_OTA_LARGE",
+                        "range": null,
+                        "title": "Two large size OTA partitions",
                         "type": "bool"
                     },
                     {
@@ -6799,6 +6829,16 @@
             },
             {
                 "children": [],
+                "depends_on": "IDF_TOOLCHAIN_GCC",
+                "help": "Disable merging identical constants (string/floating-point) across compilation units.\nThis helps in better size analysis of the application binary as the rodata section\ndistribution is more uniform across libraries. On downside, it may increase\nthe binary size and hence should be used during development phase only.",
+                "id": "COMPILER_NO_MERGE_CONSTANTS",
+                "name": "COMPILER_NO_MERGE_CONSTANTS",
+                "range": null,
+                "title": "Disable merging const sections",
+                "type": "bool"
+            },
+            {
+                "children": [],
                 "depends_on": null,
                 "help": "Adds -Wwrite-strings flag for the C/C++ compilers.\n\nFor C, this gives string constants the type ``const char[]`` so that\ncopying the address of one into a non-const ``char *`` pointer\nproduces a warning. This warning helps to find at compile time code\nthat tries to write into a string constant.\n\nFor C++, this warns about the deprecated conversion from string\nliterals to ``char *``.",
                 "id": "COMPILER_WARN_WRITE_STRINGS",
@@ -6815,6 +6855,16 @@
                 "name": "COMPILER_SAVE_RESTORE_LIBCALLS",
                 "range": null,
                 "title": "Enable -msave-restore flag to reduce code size",
+                "type": "bool"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Enable this option if you do not want default warnings to be considered as errors,\nespecially when updating IDF.\n\nThis is a temporary flag that could help to allow upgrade while having\nsome time to address the warnings raised by those default warnings.\nAlternatives are:\n1) fix code (preferred),\n2) remove specific warnings,\n3) do not consider specific warnings as error.",
+                "id": "COMPILER_DISABLE_DEFAULT_ERRORS",
+                "name": "COMPILER_DISABLE_DEFAULT_ERRORS",
+                "range": null,
+                "title": "Disable errors for default warnings",
                 "type": "bool"
             },
             {
@@ -6926,6 +6976,16 @@
                 "name": "COMPILER_ORPHAN_SECTIONS",
                 "title": "Orphan sections handling",
                 "type": "choice"
+            },
+            {
+                "children": [],
+                "depends_on": "IDF_TOOLCHAIN_GCC",
+                "help": "Enable compiler static analyzer. This may produce false-positive results and increases compile time.",
+                "id": "COMPILER_STATIC_ANALYZER",
+                "name": "COMPILER_STATIC_ANALYZER",
+                "range": null,
+                "title": "Enable compiler static analyzer",
+                "type": "bool"
             }
         ],
         "depends_on": null,
@@ -7054,7 +7114,7 @@
                         "id": "APPTRACE_UART_TX_GPIO",
                         "name": "APPTRACE_UART_TX_GPIO",
                         "range": null,
-                        "title": "UART TX on GPIO#",
+                        "title": "UART TX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -7064,7 +7124,7 @@
                         "id": "APPTRACE_UART_RX_GPIO",
                         "name": "APPTRACE_UART_RX_GPIO",
                         "range": null,
-                        "title": "UART RX on GPIO#",
+                        "title": "UART RX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -7228,7 +7288,7 @@
                                             }
                                         ],
                                         "depends_on": "APPTRACE_SV_ENABLE && APPTRACE_ENABLE",
-                                        "help": "SystemView witt transfer data trough defined interface.",
+                                        "help": "SystemView will transfer data through the defined interface.",
                                         "id": "component-config-application-level-tracing-freertos-systemview-tracing-systemview-tracing-enable-systemview-destination",
                                         "name": "APPTRACE_SV_DEST",
                                         "title": "SystemView destination",
@@ -10457,6 +10517,16 @@
                                 "type": "bool"
                             },
                             {
+                                "children": [],
+                                "depends_on": "BT_NIMBLE_ENABLED",
+                                "help": "There are tracking risks associated with using a fixed or static IRK.\nIf enabled this option, Bluedroid will assign a new randomly-generated IRK\nwhen all pairing and bonding records are deleted. This would decrease the ability\nof a previously paired peer to be used to determine whether a device\nwith which it previously shared an IRK is within range.",
+                                "id": "BT_NIMBLE_SMP_ID_RESET",
+                                "name": "BT_NIMBLE_SMP_ID_RESET",
+                                "range": null,
+                                "title": "Reset device identity when all bonding records are deleted",
+                                "type": "bool"
+                            },
+                            {
                                 "children": [
                                     {
                                         "children": [],
@@ -11803,7 +11873,7 @@
                                                 "id": "BT_LE_HCI_INTERFACE_USE_RAM",
                                                 "name": "BT_LE_HCI_INTERFACE_USE_RAM",
                                                 "range": null,
-                                                "title": "ram",
+                                                "title": "VHCI",
                                                 "type": "bool"
                                             },
                                             {
@@ -11813,15 +11883,45 @@
                                                 "id": "BT_LE_HCI_INTERFACE_USE_UART",
                                                 "name": "BT_LE_HCI_INTERFACE_USE_UART",
                                                 "range": null,
-                                                "title": "uart",
+                                                "title": "UART(H4)",
                                                 "type": "bool"
                                             }
                                         ],
                                         "depends_on": "BT_CONTROLLER_ENABLED",
                                         "help": null,
-                                        "id": "component-config-bluetooth-controller-options-hci-config-select-hci-interface",
+                                        "id": "component-config-bluetooth-controller-options-hci-config-hci-mode",
                                         "name": "BT_LE_HCI_INTERFACE",
-                                        "title": "Select HCI interface",
+                                        "title": "HCI mode",
+                                        "type": "choice"
+                                    },
+                                    {
+                                        "children": [
+                                            {
+                                                "children": [],
+                                                "depends_on": "<choice BT_LE_UART_HCI_MODE_CHOICE>",
+                                                "help": "UART HCI Mode with DMA functionality.",
+                                                "id": "BT_LE_UART_HCI_DMA_MODE",
+                                                "name": "BT_LE_UART_HCI_DMA_MODE",
+                                                "range": null,
+                                                "title": "UHCI(UART with DMA)(EXPERIMENTAL)",
+                                                "type": "bool"
+                                            },
+                                            {
+                                                "children": [],
+                                                "depends_on": "<choice BT_LE_UART_HCI_MODE_CHOICE>",
+                                                "help": "UART HCI Mode without DMA functionality.",
+                                                "id": "BT_LE_UART_HCI_NO_DMA_MODE",
+                                                "name": "BT_LE_UART_HCI_NO_DMA_MODE",
+                                                "range": null,
+                                                "title": "UART(NO DMA)",
+                                                "type": "bool"
+                                            }
+                                        ],
+                                        "depends_on": "BT_LE_HCI_INTERFACE_USE_UART && BT_CONTROLLER_ENABLED",
+                                        "help": "Specify UART HCI mode: DMA or No DMA",
+                                        "id": "component-config-bluetooth-controller-options-hci-config-uart-hci-mode",
+                                        "name": "BT_LE_UART_HCI_MODE_CHOICE",
+                                        "title": "UART HCI mode",
                                         "type": "choice"
                                     },
                                     {
@@ -11936,12 +12036,52 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "BT_LE_HCI_INTERFACE_USE_UART && BT_CONTROLLER_ENABLED",
-                                        "help": "Set the size of uart task stack",
-                                        "id": "BT_LE_HCI_UART_TASK_STACK_SIZE",
-                                        "name": "BT_LE_HCI_UART_TASK_STACK_SIZE",
+                                        "depends_on": "BT_LE_UART_HCI_NO_DMA_MODE && BT_CONTROLLER_ENABLED",
+                                        "help": "The size of rx ring buffer memory",
+                                        "id": "BT_LE_HCI_UART_RX_BUFFER_SIZE",
+                                        "name": "BT_LE_HCI_UART_RX_BUFFER_SIZE",
                                         "range": null,
-                                        "title": "HCI uart task stack size",
+                                        "title": "The size of rx ring buffer memory",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "BT_LE_UART_HCI_NO_DMA_MODE && BT_CONTROLLER_ENABLED",
+                                        "help": "The size of tx ring buffer memory",
+                                        "id": "BT_LE_HCI_UART_TX_BUFFER_SIZE",
+                                        "name": "BT_LE_HCI_UART_TX_BUFFER_SIZE",
+                                        "range": null,
+                                        "title": "The size of tx ring buffer memory",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "!BT_LE_HCI_INTERFACE_USE_RAM && BT_CONTROLLER_ENABLED",
+                                        "help": "This configures stack size of hci transport task",
+                                        "id": "BT_LE_HCI_TRANS_TASK_STACK_SIZE",
+                                        "name": "BT_LE_HCI_TRANS_TASK_STACK_SIZE",
+                                        "range": null,
+                                        "title": "HCI transport task stack size",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "BT_LE_UART_HCI_DMA_MODE && BT_CONTROLLER_ENABLED",
+                                        "help": "The amount of rx memory received at the same time",
+                                        "id": "BT_LE_HCI_TRANS_RX_MEM_NUM",
+                                        "name": "BT_LE_HCI_TRANS_RX_MEM_NUM",
+                                        "range": null,
+                                        "title": "The amount of rx memory received at the same time",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "BT_LE_UART_HCI_DMA_MODE && BT_CONTROLLER_ENABLED",
+                                        "help": "The amount of lldecs memory for driver dma mode",
+                                        "id": "BT_LE_HCI_LLDESCS_POOL_NUM",
+                                        "name": "BT_LE_HCI_LLDESCS_POOL_NUM",
+                                        "range": null,
+                                        "title": "The amount of lldecs memory for driver dma mode",
                                         "type": "int"
                                     }
                                 ],
@@ -12623,6 +12763,156 @@
                                 "range": null,
                                 "title": "Enable TX CCA feature",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N15",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N15",
+                                        "range": null,
+                                        "title": "-15dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N12",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N12",
+                                        "range": null,
+                                        "title": "-12dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N9",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N9",
+                                        "range": null,
+                                        "title": "-9dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N6",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N6",
+                                        "range": null,
+                                        "title": "-6dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N3",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N3",
+                                        "range": null,
+                                        "title": "-3dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_N0",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_N0",
+                                        "range": null,
+                                        "title": "0dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P3",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P3",
+                                        "range": null,
+                                        "title": "+3dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P6",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P6",
+                                        "range": null,
+                                        "title": "+6dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P9",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P9",
+                                        "range": null,
+                                        "title": "+9dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P12",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P12",
+                                        "range": null,
+                                        "title": "+12dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P15",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P15",
+                                        "range": null,
+                                        "title": "+15dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P18",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P18",
+                                        "range": null,
+                                        "title": "+18dBm",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice BT_LE_DFT_TX_POWER_LEVEL_DBM>",
+                                        "help": null,
+                                        "id": "BT_LE_DFT_TX_POWER_LEVEL_P20",
+                                        "name": "BT_LE_DFT_TX_POWER_LEVEL_P20",
+                                        "range": null,
+                                        "title": "+20dBm",
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": "BT_CONTROLLER_ENABLED",
+                                "help": "Specify default Tx power level(dBm).",
+                                "id": "component-config-bluetooth-controller-options-ble-default-tx-power-level-dbm-",
+                                "name": "BT_LE_DFT_TX_POWER_LEVEL_DBM",
+                                "title": "BLE default Tx power level(dBm)",
+                                "type": "choice"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "BT_CONTROLLER_ENABLED",
+                                "help": null,
+                                "id": "BT_LE_DFT_TX_POWER_LEVEL_DBM_EFF",
+                                "name": "BT_LE_DFT_TX_POWER_LEVEL_DBM_EFF",
+                                "range": null,
+                                "title": null,
+                                "type": "int"
                             }
                         ],
                         "depends_on": "BT_CONTROLLER_ENABLED",
@@ -15592,7 +15882,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "SOC_MIPI_CSI_SUPPORTED",
+                        "depends_on": "SOC_MIPI_CSI_SUPPORTED && (SOC_MIPI_CSI_SUPPORTED || SOC_LCDCAM_CAM_SUPPORTED)",
                         "help": "Ensure the CSI driver ISR is IRAM-Safe. When enabled, the ISR handler\nwill be available when the cache is disabled.",
                         "id": "CAM_CTLR_MIPI_CSI_ISR_IRAM_SAFE",
                         "name": "CAM_CTLR_MIPI_CSI_ISR_IRAM_SAFE",
@@ -15602,16 +15892,26 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SOC_MIPI_CSI_SUPPORTED",
+                        "depends_on": "SOC_MIPI_CSI_SUPPORTED || SOC_LCDCAM_CAM_SUPPORTED",
                         "help": "Ensure the ISP_DVP driver ISR is IRAM-Safe. When enabled, the ISR handler\nwill be available when the cache is disabled.",
                         "id": "CAM_CTLR_ISP_DVP_ISR_IRAM_SAFE",
                         "name": "CAM_CTLR_ISP_DVP_ISR_IRAM_SAFE",
                         "range": null,
                         "title": "ISP_DVP ISR IRAM-Safe",
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_LCDCAM_CAM_SUPPORTED && (SOC_MIPI_CSI_SUPPORTED || SOC_LCDCAM_CAM_SUPPORTED)",
+                        "help": "Ensure the DVP driver ISR is IRAM-Safe. When enabled, the ISR handler\nwill be available when the cache is disabled.",
+                        "id": "CAM_CTLR_DVP_CAM_ISR_IRAM_SAFE",
+                        "name": "CAM_CTLR_DVP_CAM_ISR_IRAM_SAFE",
+                        "range": null,
+                        "title": "DVP ISR IRAM-Safe",
+                        "type": "bool"
                     }
                 ],
-                "depends_on": "SOC_MIPI_CSI_SUPPORTED",
+                "depends_on": "SOC_MIPI_CSI_SUPPORTED || SOC_LCDCAM_CAM_SUPPORTED",
                 "id": "component-config-esp-driver-camera-controller-configurations",
                 "title": "ESP-Driver:Camera Controller Configurations",
                 "type": "menu"
@@ -16066,6 +16366,44 @@
                 "depends_on": "SOC_GPSPI_SUPPORTED",
                 "id": "component-config-esp-driver-spi-configurations",
                 "title": "ESP-Driver:SPI Configurations",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "SOC_TOUCH_SENSOR_SUPPORTED",
+                        "help": "Place touch sensor oneshot scanning and continuous scanning functions into IRAM,\nso that these function can be IRAM-safe and able to be called when the flash cache is disabled.\nEnabling this option can improve driver performance as well.",
+                        "id": "TOUCH_CTRL_FUNC_IN_IRAM",
+                        "name": "TOUCH_CTRL_FUNC_IN_IRAM",
+                        "range": null,
+                        "title": "Place touch sensor control functions into IRAM",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_TOUCH_SENSOR_SUPPORTED",
+                        "help": "Ensure the touch sensor interrupt is IRAM-Safe by allowing the interrupt handler to be\nexecutable when the cache is disabled (e.g. SPI Flash write).",
+                        "id": "TOUCH_ISR_IRAM_SAFE",
+                        "name": "TOUCH_ISR_IRAM_SAFE",
+                        "range": null,
+                        "title": "Touch sensor ISR IRAM-Safe",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_TOUCH_SENSOR_SUPPORTED",
+                        "help": "Whether to enable the debug log message for touch driver.\nNote that, this option only controls the touch driver log, won't affect other drivers.",
+                        "id": "TOUCH_ENABLE_DEBUG_LOG",
+                        "name": "TOUCH_ENABLE_DEBUG_LOG",
+                        "range": null,
+                        "title": "Enable debug log",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": "SOC_TOUCH_SENSOR_SUPPORTED",
+                "id": "component-config-esp-driver-touch-sensor-configurations",
+                "title": "ESP-Driver:Touch Sensor Configurations",
                 "type": "menu"
             },
             {
@@ -17293,69 +17631,19 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_24M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_24",
-                                        "name": "XTAL_FREQ_24",
-                                        "range": null,
-                                        "title": "24 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_26M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_26",
-                                        "name": "XTAL_FREQ_26",
-                                        "range": null,
-                                        "title": "26 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_32M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_32",
-                                        "name": "XTAL_FREQ_32",
-                                        "range": null,
-                                        "title": "32 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_40M && <choice XTAL_FREQ_SEL>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_40",
                                         "name": "XTAL_FREQ_40",
                                         "range": null,
                                         "title": "40 MHz",
                                         "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_48M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_48",
-                                        "name": "XTAL_FREQ_48",
-                                        "range": null,
-                                        "title": "48 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_AUTO_DETECT && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_AUTO",
-                                        "name": "XTAL_FREQ_AUTO",
-                                        "range": null,
-                                        "title": "Autodetect",
-                                        "type": "bool"
                                     }
                                 ],
                                 "depends_on": null,
-                                "help": "This option selects the operating frequency of the XTAL (crystal) clock used to drive the ESP target.\nThe selected value MUST reflect the frequency of the given hardware.\n\nNote: The XTAL_FREQ_AUTO option allows the ESP target to automatically estimating XTAL clock's\noperating frequency. However, this feature is only supported on the ESP32. The ESP32 uses the\ninternal 8MHZ as a reference when estimating. Due to the internal oscillator's frequency being\ntemperature dependent, usage of the XTAL_FREQ_AUTO is not recommended in applications that operate\nin high ambient temperatures or use high-temperature qualified chips and modules.",
+                                "help": "This option selects the operating frequency of the XTAL (crystal) clock used to drive the ESP target.\nThe selected value MUST reflect the frequency of the given hardware.",
                                 "id": "component-config-hardware-settings-main-xtal-config-main-xtal-frequency",
-                                "name": "XTAL_FREQ_SEL",
+                                "name": "XTAL_FREQ",
                                 "title": "Main XTAL frequency",
                                 "type": "choice"
                             },
@@ -17670,6 +17958,16 @@
                         "name": "ESP_NETIF_BRIDGE_EN",
                         "range": null,
                         "title": "Enable LwIP IEEE 802.1D bridge",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to use the DNS server which belongs to the selected default network interface.\nThis feature collects DNS server and netif information from LWIP core modules.\nWhenever a new default netif is selected, global DNS servers in LWIP are updated with the netif\nrelated servers.",
+                        "id": "ESP_NETIF_SET_DNS_PER_DEFAULT_NETIF",
+                        "name": "ESP_NETIF_SET_DNS_PER_DEFAULT_NETIF",
+                        "range": null,
+                        "title": "Enable DNS server per interface",
                         "type": "bool"
                     }
                 ],
@@ -18607,7 +18905,7 @@
                         "id": "ESP_CONSOLE_UART_TX_GPIO",
                         "name": "ESP_CONSOLE_UART_TX_GPIO",
                         "range": null,
-                        "title": "UART TX on GPIO#",
+                        "title": "UART TX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -18617,7 +18915,7 @@
                         "id": "ESP_CONSOLE_UART_RX_GPIO",
                         "name": "ESP_CONSOLE_UART_RX_GPIO",
                         "range": null,
-                        "title": "UART RX on GPIO#",
+                        "title": "UART RX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -18658,7 +18956,7 @@
                             {
                                 "children": [],
                                 "depends_on": "ESP_INT_WDT",
-                                "help": "The timeout of the watchdog, in miliseconds. Make this higher than the FreeRTOS tick rate.",
+                                "help": "The timeout of the watchdog, in milliseconds. Make this higher than the FreeRTOS tick rate.",
                                 "id": "ESP_INT_WDT_TIMEOUT_MS",
                                 "name": "ESP_INT_WDT_TIMEOUT_MS",
                                 "range": [
@@ -18785,7 +19083,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!IDF_TARGET_ESP32 && (ESP_SYSTEM_RTC_EXT_OSC || ESP_SYSTEM_RTC_EXT_XTAL)",
+                        "depends_on": "SOC_XT_WDT_SUPPORTED && (ESP_SYSTEM_RTC_EXT_OSC || ESP_SYSTEM_RTC_EXT_XTAL)",
                         "help": "This watchdog timer can detect oscillation failure of the XTAL32K_CLK. When such a failure\nis detected the hardware can be set up to automatically switch to BACKUP32K_CLK and generate\nan interrupt.",
                         "id": "ESP_XT_WDT",
                         "name": "ESP_XT_WDT",
@@ -22873,7 +23171,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "LOG_TIMESTAMP_SOURCE_NONE",
@@ -22903,7 +23201,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
                                         "name": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
@@ -23081,12 +23379,12 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Sockets take up a certain amount of memory, and allowing fewer\nsockets to be open at the same time conserves memory. Specify\nthe maximum amount of sockets here. The valid value is from 1\nto 16.",
+                        "help": "The practical maximum limit is\ndetermined by available heap memory at runtime.\n\nSockets take up a certain amount of memory, and allowing fewer\nsockets to be open at the same time conserves memory. Specify\nthe maximum amount of sockets here. The valid value is from 1\nto 253. If using value above 61, update CMakeLists defining\nFD_SETSIZE to the number of sockets used plus the\nexpected open files (minimum of +3 for stdout, stderr and stdin).",
                         "id": "LWIP_MAX_SOCKETS",
                         "name": "LWIP_MAX_SOCKETS",
                         "range": [
                             1,
-                            16
+                            253
                         ],
                         "title": "Max number of open sockets",
                         "type": "int"
@@ -24016,28 +24314,6 @@
                         "type": "hex"
                     },
                     {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "LWIP_PPP_SUPPORT && LWIP_IPV6",
-                                "help": "Enable IPV6 support in PPP for the local link between the DTE (processor) and DCE (modem).\nThere are some modems which do not support the IPV6 addressing in the local link.\nIf they are requested for IPV6CP negotiation, they may time out.\nThis would in turn fail the configuration for the whole link.\nIf your modem is not responding correctly to PPP Phase Network, try to disable IPV6 support.",
-                                "id": "LWIP_PPP_ENABLE_IPV6",
-                                "name": "LWIP_PPP_ENABLE_IPV6",
-                                "range": null,
-                                "title": "Enable IPV6 support for PPP connections (IPV6CP)",
-                                "type": "bool"
-                            }
-                        ],
-                        "depends_on": null,
-                        "help": "Enable PPP stack. Now only PPP over serial is possible.",
-                        "id": "LWIP_PPP_SUPPORT",
-                        "is_menuconfig": true,
-                        "name": "LWIP_PPP_SUPPORT",
-                        "range": null,
-                        "title": "Enable PPP support",
-                        "type": "menu"
-                    },
-                    {
                         "children": [],
                         "depends_on": "LWIP_IPV6",
                         "help": "Config max number of IPv6 packets to queue during MAC resolution.",
@@ -24064,115 +24340,157 @@
                         "type": "int"
                     },
                     {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable to set a callback which is called on change of the internal PPP state machine.",
-                        "id": "LWIP_PPP_NOTIFY_PHASE_SUPPORT",
-                        "name": "LWIP_PPP_NOTIFY_PHASE_SUPPORT",
-                        "range": null,
-                        "title": "Enable Notify Phase Callback",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable Password Authentication Protocol (PAP) support",
-                        "id": "LWIP_PPP_PAP_SUPPORT",
-                        "name": "LWIP_PPP_PAP_SUPPORT",
-                        "range": null,
-                        "title": "Enable PAP support",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable Challenge Handshake Authentication Protocol (CHAP) support",
-                        "id": "LWIP_PPP_CHAP_SUPPORT",
-                        "name": "LWIP_PPP_CHAP_SUPPORT",
-                        "range": null,
-                        "title": "Enable CHAP support",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable Microsoft version of the Challenge-Handshake Authentication Protocol (MSCHAP) support",
-                        "id": "LWIP_PPP_MSCHAP_SUPPORT",
-                        "name": "LWIP_PPP_MSCHAP_SUPPORT",
-                        "range": null,
-                        "title": "Enable MSCHAP support",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable Microsoft Point-to-Point Encryption (MPPE) support",
-                        "id": "LWIP_PPP_MPPE_SUPPORT",
-                        "name": "LWIP_PPP_MPPE_SUPPORT",
-                        "range": null,
-                        "title": "Enable MPPE support",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable to use PPP server",
-                        "id": "LWIP_PPP_SERVER_SUPPORT",
-                        "name": "LWIP_PPP_SERVER_SUPPORT",
-                        "range": null,
-                        "title": "Enable PPP server support",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable support for VJ header compression.\nPlease disable this if you're using NAPT on PPP interface,\nsince the compressed IP header might not be correctly interpreted\nin NAT causing the compressed packet to be dropped.",
-                        "id": "LWIP_PPP_VJ_HEADER_COMPRESSION",
-                        "name": "LWIP_PPP_VJ_HEADER_COMPRESSION",
-                        "range": null,
-                        "title": "Enable VJ IP Header compression",
-                        "type": "bool"
-                    },
-                    {
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "LWIP_ENABLE_LCP_ECHO",
-                                "help": "Interval in seconds between keepalive LCP echo requests, 0 to disable.",
-                                "id": "LWIP_LCP_ECHOINTERVAL",
-                                "name": "LWIP_LCP_ECHOINTERVAL",
+                                "depends_on": "LWIP_PPP_SUPPORT && LWIP_IPV4",
+                                "help": "Enable IPCP protocol in PPP negotiations, which assigns IPv4 addresses to the PPP client,\nas well as IPv4 DNS servers.\nYou can disable this if your modem supports IPv6 only.",
+                                "id": "LWIP_PPP_ENABLE_IPV4",
+                                "name": "LWIP_PPP_ENABLE_IPV4",
                                 "range": null,
-                                "title": "Echo interval (s)",
-                                "type": "int"
+                                "title": "Enable IPV4 support for PPP connections (IPCP)",
+                                "type": "bool"
                             },
                             {
                                 "children": [],
-                                "depends_on": "LWIP_ENABLE_LCP_ECHO",
-                                "help": "Number of consecutive unanswered echo requests before failure is indicated.",
-                                "id": "LWIP_LCP_MAXECHOFAILS",
-                                "name": "LWIP_LCP_MAXECHOFAILS",
+                                "depends_on": "LWIP_PPP_SUPPORT && LWIP_IPV6",
+                                "help": "Enable IPV6 support in PPP for the local link between the DTE (processor) and DCE (modem).\nThere are some modems which do not support the IPV6 addressing in the local link.\nIf they are requested for IPV6CP negotiation, they may time out.\nThis would in turn fail the configuration for the whole link.\nIf your modem is not responding correctly to PPP Phase Network, try to disable IPV6 support.",
+                                "id": "LWIP_PPP_ENABLE_IPV6",
+                                "name": "LWIP_PPP_ENABLE_IPV6",
                                 "range": null,
-                                "title": "Maximum echo failures",
-                                "type": "int"
+                                "title": "Enable IPV6 support for PPP connections (IPV6CP)",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable to set a callback which is called on change of the internal PPP state machine.",
+                                "id": "LWIP_PPP_NOTIFY_PHASE_SUPPORT",
+                                "name": "LWIP_PPP_NOTIFY_PHASE_SUPPORT",
+                                "range": null,
+                                "title": "Enable Notify Phase Callback",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable Password Authentication Protocol (PAP) support",
+                                "id": "LWIP_PPP_PAP_SUPPORT",
+                                "name": "LWIP_PPP_PAP_SUPPORT",
+                                "range": null,
+                                "title": "Enable PAP support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable Challenge Handshake Authentication Protocol (CHAP) support",
+                                "id": "LWIP_PPP_CHAP_SUPPORT",
+                                "name": "LWIP_PPP_CHAP_SUPPORT",
+                                "range": null,
+                                "title": "Enable CHAP support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable Microsoft version of the Challenge-Handshake Authentication Protocol (MSCHAP) support",
+                                "id": "LWIP_PPP_MSCHAP_SUPPORT",
+                                "name": "LWIP_PPP_MSCHAP_SUPPORT",
+                                "range": null,
+                                "title": "Enable MSCHAP support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable Microsoft Point-to-Point Encryption (MPPE) support",
+                                "id": "LWIP_PPP_MPPE_SUPPORT",
+                                "name": "LWIP_PPP_MPPE_SUPPORT",
+                                "range": null,
+                                "title": "Enable MPPE support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable to use PPP server",
+                                "id": "LWIP_PPP_SERVER_SUPPORT",
+                                "name": "LWIP_PPP_SERVER_SUPPORT",
+                                "range": null,
+                                "title": "Enable PPP server support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable support for VJ header compression.\nPlease disable this if you're using NAPT on PPP interface,\nsince the compressed IP header might not be correctly interpreted\nin NAT causing the compressed packet to be dropped.",
+                                "id": "LWIP_PPP_VJ_HEADER_COMPRESSION",
+                                "name": "LWIP_PPP_VJ_HEADER_COMPRESSION",
+                                "range": null,
+                                "title": "Enable VJ IP Header compression",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "LWIP_ENABLE_LCP_ECHO",
+                                        "help": "Interval in seconds between keepalive LCP echo requests, 0 to disable.",
+                                        "id": "LWIP_LCP_ECHOINTERVAL",
+                                        "name": "LWIP_LCP_ECHOINTERVAL",
+                                        "range": null,
+                                        "title": "Echo interval (s)",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "LWIP_ENABLE_LCP_ECHO",
+                                        "help": "Number of consecutive unanswered echo requests before failure is indicated.",
+                                        "id": "LWIP_LCP_MAXECHOFAILS",
+                                        "name": "LWIP_LCP_MAXECHOFAILS",
+                                        "range": null,
+                                        "title": "Maximum echo failures",
+                                        "type": "int"
+                                    }
+                                ],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable LCP echo keepalive requests",
+                                "id": "LWIP_ENABLE_LCP_ECHO",
+                                "name": "LWIP_ENABLE_LCP_ECHO",
+                                "range": null,
+                                "title": "Enable LCP ECHO",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT",
+                                "help": "Enable PPP debug log output",
+                                "id": "LWIP_PPP_DEBUG_ON",
+                                "name": "LWIP_PPP_DEBUG_ON",
+                                "range": null,
+                                "title": "Enable PPP debug log output",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "LWIP_PPP_SUPPORT && !LWIP_PPP_MPPE_SUPPORT && !LWIP_PPP_MSCHAP_SUPPORT",
+                                "help": "This option uses mbedTLS crypto functions (instead of internal PolarSSL\nimplementation) for PPP authentication modes (PAP, CHAP, etc.).\nYou can use this option to address symbol duplication issues, since\nthe internal functions are not namespaced (e.g. md5_init()).",
+                                "id": "LWIP_USE_EXTERNAL_MBEDTLS",
+                                "name": "LWIP_USE_EXTERNAL_MBEDTLS",
+                                "range": null,
+                                "title": "Use mbedTLS instead of internal polarSSL",
+                                "type": "bool"
                             }
                         ],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable LCP echo keepalive requests",
-                        "id": "LWIP_ENABLE_LCP_ECHO",
-                        "name": "LWIP_ENABLE_LCP_ECHO",
+                        "depends_on": null,
+                        "help": "Enable PPP stack. Now only PPP over serial is possible.",
+                        "id": "LWIP_PPP_SUPPORT",
+                        "is_menuconfig": true,
+                        "name": "LWIP_PPP_SUPPORT",
                         "range": null,
-                        "title": "Enable LCP ECHO",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "LWIP_PPP_SUPPORT",
-                        "help": "Enable PPP debug log output",
-                        "id": "LWIP_PPP_DEBUG_ON",
-                        "name": "LWIP_PPP_DEBUG_ON",
-                        "range": null,
-                        "title": "Enable PPP debug log output",
-                        "type": "bool"
+                        "title": "Enable PPP support",
+                        "type": "menu"
                     },
                     {
                         "children": [
@@ -24378,6 +24696,16 @@
                                 "name": "LWIP_FALLBACK_DNS_SERVER_SUPPORT",
                                 "range": null,
                                 "title": "Enable DNS fallback server support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "This option allows collecting DNS server settings per netif using\nconfigurable callback function.\nIt's typically used with CONFIG_ESP_NETIF_SET_DNS_PER_DEFAULT_NETIF\nwhich configures a callback to collect the DNS info on esp_netif layer.",
+                                "id": "LWIP_DNS_SETSERVER_WITH_NETIF",
+                                "name": "LWIP_DNS_SETSERVER_WITH_NETIF",
+                                "range": null,
+                                "title": "Enable DNS server settings with netif",
                                 "type": "bool"
                             }
                         ],
@@ -25201,11 +25529,11 @@
                             {
                                 "children": [],
                                 "depends_on": "MBEDTLS_X509_CRL_PARSE_C",
-                                "help": "Enable PKCS #7 core for using PKCS #7-formatted signatures.",
+                                "help": "Enable PKCS number 7 core for using PKCS number 7-formatted signatures.",
                                 "id": "MBEDTLS_PKCS7_C",
                                 "name": "MBEDTLS_PKCS7_C",
                                 "range": null,
-                                "title": "Enable PKCS #7",
+                                "title": "Enable PKCS number 7",
                                 "type": "bool"
                             },
                             {
@@ -25793,7 +26121,7 @@
                                     {
                                         "children": [],
                                         "depends_on": "MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE && MBEDTLS_ECDH_C && MBEDTLS_ECDSA_C && MBEDTLS_TLS_ENABLED",
-                                        "help": "Enable to support ciphersuites with prefix TLS-ECDHE-RSA-WITH-",
+                                        "help": "Enable to support ciphersuites with prefix TLS-ECDHE-ECDSA-WITH-",
                                         "id": "MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA",
                                         "name": "MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA",
                                         "range": null,
@@ -25803,7 +26131,7 @@
                                     {
                                         "children": [],
                                         "depends_on": "MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE && MBEDTLS_ECDH_C && MBEDTLS_ECDSA_C && MBEDTLS_TLS_ENABLED",
-                                        "help": "Enable to support ciphersuites with prefix TLS-ECDHE-RSA-WITH-",
+                                        "help": "Enable to support ciphersuites with prefix TLS-ECDH-ECDSA-WITH-",
                                         "id": "MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA",
                                         "name": "MBEDTLS_KEY_EXCHANGE_ECDH_ECDSA",
                                         "range": null,
@@ -25813,7 +26141,7 @@
                                     {
                                         "children": [],
                                         "depends_on": "MBEDTLS_KEY_EXCHANGE_ELLIPTIC_CURVE && MBEDTLS_ECDH_C && MBEDTLS_TLS_ENABLED",
-                                        "help": "Enable to support ciphersuites with prefix TLS-ECDHE-RSA-WITH-",
+                                        "help": "Enable to support ciphersuites with prefix TLS-ECDH-RSA-WITH-",
                                         "id": "MBEDTLS_KEY_EXCHANGE_ECDH_RSA",
                                         "name": "MBEDTLS_KEY_EXCHANGE_ECDH_RSA",
                                         "range": null,
@@ -26820,6 +27148,16 @@
                         "name": "NVS_LEGACY_DUP_KEYS_COMPATIBILITY",
                         "range": null,
                         "title": "Enable legacy nvs_set function behavior when same key is reused with different data types",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SPIRAM && (SPIRAM_USE_CAPS_ALLOC || SPIRAM_USE_MALLOC)",
+                        "help": "Enabling this option lets NVS library try to allocate page cache and key hash list in SPIRAM\ninstead of internal RAM. It can help applications using large nvs partitions or large number\nof keys to save heap space in internal RAM. SPIRAM heap allocation negatively impacts speed\nof NVS operations as the CPU accesses NVS cache via SPI instead of direct access to the internal RAM.",
+                        "id": "NVS_ALLOCATE_CACHE_IN_SPIRAM",
+                        "name": "NVS_ALLOCATE_CACHE_IN_SPIRAM",
+                        "range": null,
+                        "title": "Prefers allocation of in-memory cache structures in SPI connected PSRAM",
                         "type": "bool"
                     }
                 ],
@@ -28690,6 +29028,16 @@
                                 "range": null,
                                 "title": "Enable panic handler which outputs over LP UART",
                                 "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "ULP_COPROC_TYPE_LP_CORE && (SOC_ULP_SUPPORTED || SOC_RISCV_COPROC_SUPPORTED || SOC_LP_CORE_SUPPORTED)",
+                                "help": "Set this option to route lp_core_printf to the console HP-UART.\nThis allows you to easily view print outputs from the LP core, without\nhaving to connect to the LP-UART. This option comes with the following\nlimitations:\n\n1. There is no mutual exclusion between the HP-Core and the LP-Core accessing\nthe HP-UART, which means that if both cores are logging heavily the output\nstrings might get mangled together.\n2. The HP-UART can only work while the HP-Core is running, which means that\nif the HP-Core is in deep sleep, the LP-Core will not be able to print to the\nconsole HP-UART.\n\nDue to these limitations it is only recommended to use this option for easy debugging.\nFor more serious use-cases you should use the LP-UART.",
+                                "id": "ULP_HP_UART_CONSOLE_PRINT",
+                                "name": "ULP_HP_UART_CONSOLE_PRINT",
+                                "range": null,
+                                "title": "Route lp_core_printf to the console HP-UART",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": "SOC_ULP_SUPPORTED || SOC_RISCV_COPROC_SUPPORTED || SOC_LP_CORE_SUPPORTED",
@@ -28836,69 +29184,88 @@
                     {
                         "children": [
                             {
-                                "children": [],
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "SOC_USB_OTG_SUPPORTED",
+                                        "help": "On connection of a USB device, the USB 2.0 specification requires\na \"debounce interval with a minimum duration of 100ms\" to allow the connection to stabilize\n(see USB 2.0 chapter 7.1.7.3 for more details).\nDuring the debounce interval, no new connection/disconnection events are registered.\n\nThe default value is set to 250 ms to be safe.",
+                                        "id": "USB_HOST_DEBOUNCE_DELAY_MS",
+                                        "name": "USB_HOST_DEBOUNCE_DELAY_MS",
+                                        "range": null,
+                                        "title": "Debounce delay in ms",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "SOC_USB_OTG_SUPPORTED",
+                                        "help": "The reset signaling can be generated on any Hub or Host Controller port by request from\nthe USB System Software. The USB 2.0 specification requires that \"the reset signaling must\nbe driven for a minimum of 10ms\" (see USB 2.0 chapter 7.1.7.5 for more details).\nAfter the reset, the hub port will transition to the Enabled state (refer to Section 11.5).\n\nThe default value is set to 30 ms to be safe.",
+                                        "id": "USB_HOST_RESET_HOLD_MS",
+                                        "name": "USB_HOST_RESET_HOLD_MS",
+                                        "range": null,
+                                        "title": "Reset hold in ms",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "SOC_USB_OTG_SUPPORTED",
+                                        "help": "After a port stops driving the reset signal, the USB 2.0 specification requires that\nthe \"USB System Software guarantees a minimum of 10 ms for reset recovery\" before the\nattached device is expected to respond to data transfers (see USB 2.0 chapter 7.1.7.3 for\nmore details).\nThe device may ignore any data transfers during the recovery interval.\n\nThe default value is set to 30 ms to be safe.",
+                                        "id": "USB_HOST_RESET_RECOVERY_MS",
+                                        "name": "USB_HOST_RESET_RECOVERY_MS",
+                                        "range": null,
+                                        "title": "Reset recovery delay in ms",
+                                        "type": "int"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "SOC_USB_OTG_SUPPORTED",
+                                        "help": "\"After successful completion of the Status stage, the device is allowed a SetAddress()\nrecovery interval of 2 ms. At the end of this interval, the device must be able to accept\nSetup packets addressed to the new address. Also, at the end of the recovery interval, the\ndevice must not respond to tokens sent to the old address (unless, of course, the old and new\naddress is the same).\" See USB 2.0 chapter 9.2.6.3 for more details.\n\nThe default value is set to 10 ms to be safe.",
+                                        "id": "USB_HOST_SET_ADDR_RECOVERY_MS",
+                                        "name": "USB_HOST_SET_ADDR_RECOVERY_MS",
+                                        "range": null,
+                                        "title": "SetAddress() recovery time in ms",
+                                        "type": "int"
+                                    }
+                                ],
                                 "depends_on": "SOC_USB_OTG_SUPPORTED",
-                                "help": "On connection of a USB device, the USB 2.0 specification requires a \"debounce interval with a minimum\nduration of 100ms\" to allow the connection to stabilize (see USB 2.0 chapter 7.1.7.3 for more details).\nDuring the debounce interval, no new connection/disconnection events are registered.\n\nThe default value is set to 250 ms to be safe.",
-                                "id": "USB_HOST_DEBOUNCE_DELAY_MS",
-                                "name": "USB_HOST_DEBOUNCE_DELAY_MS",
-                                "range": null,
-                                "title": "Debounce delay in ms",
-                                "type": "int"
+                                "id": "component-config-usb-otg-hub-driver-configuration-root-port-configuration",
+                                "title": "Root Port configuration",
+                                "type": "menu"
                             },
                             {
-                                "children": [],
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "USB_HOST_HUBS_SUPPORTED && SOC_USB_OTG_SUPPORTED",
+                                        "help": "Enables support for connecting multiple Hubs simultaneously.",
+                                        "id": "USB_HOST_HUB_MULTI_LEVEL",
+                                        "name": "USB_HOST_HUB_MULTI_LEVEL",
+                                        "range": null,
+                                        "title": "Support multiple Hubs",
+                                        "type": "bool"
+                                    }
+                                ],
                                 "depends_on": "SOC_USB_OTG_SUPPORTED",
-                                "help": "The reset signaling can be generated on any Hub or Host Controller port by request from the USB System\nSoftware. The USB 2.0 specification requires that \"the reset signaling must be driven for a minimum of\n10ms\" (see USB 2.0 chapter 7.1.7.5 for more details).  After the reset, the hub port will transition to\nthe Enabled state (refer to Section 11.5).\n\nThe default value is set to 30 ms to be safe.",
-                                "id": "USB_HOST_RESET_HOLD_MS",
-                                "name": "USB_HOST_RESET_HOLD_MS",
+                                "help": "Enables support of external Hubs.",
+                                "id": "USB_HOST_HUBS_SUPPORTED",
+                                "name": "USB_HOST_HUBS_SUPPORTED",
                                 "range": null,
-                                "title": "Reset hold in ms",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "SOC_USB_OTG_SUPPORTED",
-                                "help": "After a port stops driving the reset signal, the USB 2.0 specification requires that the \"USB System\nSoftware guarantees a minimum of 10 ms for reset recovery\" before the attached device is expected to\nrespond to data transfers (see USB 2.0 chapter 7.1.7.3 for more details). The device may ignore any\ndata transfers during the recovery interval.\n\nThe default value is set to 30 ms to be safe.",
-                                "id": "USB_HOST_RESET_RECOVERY_MS",
-                                "name": "USB_HOST_RESET_RECOVERY_MS",
-                                "range": null,
-                                "title": "Reset recovery delay in ms",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "SOC_USB_OTG_SUPPORTED",
-                                "help": "\"After successful completion of the Status stage, the device is allowed a SetAddress() recovery\ninterval of 2 ms. At the end of this interval, the device must be able to accept Setup packets\naddressed to the new address. Also, at the end of the recovery interval, the device must not respond to\ntokens sent to the old address (unless, of course, the old and new address is the same).\" See USB 2.0\nchapter 9.2.6.3 for more details.\n\nThe default value is set to 10 ms to be safe.",
-                                "id": "USB_HOST_SET_ADDR_RECOVERY_MS",
-                                "name": "USB_HOST_SET_ADDR_RECOVERY_MS",
-                                "range": null,
-                                "title": "SetAddress() recovery time in ms",
-                                "type": "int"
+                                "title": "Support Hubs",
+                                "type": "bool"
                             }
                         ],
                         "depends_on": "SOC_USB_OTG_SUPPORTED",
-                        "id": "component-config-usb-otg-root-hub-configuration",
-                        "title": "Root Hub configuration",
+                        "id": "component-config-usb-otg-hub-driver-configuration",
+                        "title": "Hub Driver Configuration",
                         "type": "menu"
                     },
                     {
                         "children": [],
                         "depends_on": "SOC_USB_OTG_SUPPORTED",
-                        "help": "The enumeration filter callback is called before enumeration of each newly attached device. This callback\nallows users to control whether a device should be enumerated, and what configuration number to use when\nenumerating a device.\n\nIf enabled, the enumeration filter callback can be set via 'usb_host_config_t' when calling\n'usb_host_install()'.",
+                        "help": "The enumeration filter callback is called before enumeration of each newly attached device.\nThis callback allows users to control whether a device should be enumerated, and what configuration\nnumber to use when enumerating a device.\n\nIf enabled, the enumeration filter callback can be set via 'usb_host_config_t' when calling\n'usb_host_install()'.",
                         "id": "USB_HOST_ENABLE_ENUM_FILTER_CALLBACK",
                         "name": "USB_HOST_ENABLE_ENUM_FILTER_CALLBACK",
                         "range": null,
                         "title": "Enable enumeration filter callback",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "IDF_EXPERIMENTAL_FEATURES && SOC_USB_OTG_SUPPORTED",
-                        "help": "Feature is under development.",
-                        "id": "USB_HOST_EXT_HUB_SUPPORT",
-                        "name": "USB_HOST_EXT_HUB_SUPPORT",
-                        "range": null,
-                        "title": "Support USB HUB (Experimental)",
                         "type": "bool"
                     },
                     {

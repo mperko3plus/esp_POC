@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/json
+# Install script for directory: /home/mperko/esp2/esp-idf/components/json
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

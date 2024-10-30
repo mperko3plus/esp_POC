@@ -630,6 +630,12 @@
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_ppa/CMakeFiles/install.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_ppa/CMakeFiles/install/local.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_ppa/CMakeFiles/install/strip.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/edit_cache.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/rebuild_cache.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/list_install_components.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/install.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/install/local.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/esp_driver_touch_sens/CMakeFiles/install/strip.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_eth/CMakeFiles/edit_cache.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/esp_eth/CMakeFiles/rebuild_cache.dir
@@ -781,6 +787,13 @@
 /home/mperko/bleesp/onoff_server/build/esp-idf/openthread/CMakeFiles/install.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/openthread/CMakeFiles/install/local.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/openthread/CMakeFiles/install/strip.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/__idf_rt.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/edit_cache.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/rebuild_cache.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/list_install_components.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/install.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/install/local.dir
+/home/mperko/bleesp/onoff_server/build/esp-idf/rt/CMakeFiles/install/strip.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/spiffs/CMakeFiles/edit_cache.dir
 /home/mperko/bleesp/onoff_server/build/esp-idf/spiffs/CMakeFiles/rebuild_cache.dir

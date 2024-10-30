@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/ieee802154
+# Install script for directory: /home/mperko/esp2/esp-idf/components/ieee802154
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

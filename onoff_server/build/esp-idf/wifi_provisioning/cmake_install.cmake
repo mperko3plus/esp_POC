@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/wifi_provisioning
+# Install script for directory: /home/mperko/esp2/esp-idf/components/wifi_provisioning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

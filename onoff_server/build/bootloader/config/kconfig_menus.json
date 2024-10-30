@@ -443,16 +443,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_APM_CTRL_FILTER_SUPPORTED",
-        "name": "SOC_APM_CTRL_FILTER_SUPPORTED",
-        "range": null,
-        "title": null,
-        "type": "bool"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_PMU_SUPPORTED",
         "name": "SOC_PMU_SUPPORTED",
         "range": null,
@@ -1043,6 +1033,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_CPU_PMP_REGION_GRANULARITY",
+        "name": "SOC_CPU_PMP_REGION_GRANULARITY",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_DS_SIGNATURE_MAX_BIT_LEN",
         "name": "SOC_DS_SIGNATURE_MAX_BIT_LEN",
         "range": null,
@@ -1245,6 +1245,16 @@
         "help": null,
         "id": "SOC_GPIO_DEEP_SLEEP_WAKE_VALID_GPIO_MASK",
         "name": "SOC_GPIO_DEEP_SLEEP_WAKE_VALID_GPIO_MASK",
+        "range": null,
+        "title": null,
+        "type": "int"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_GPIO_DEEP_SLEEP_WAKE_SUPPORTED_PIN_CNT",
+        "name": "SOC_GPIO_DEEP_SLEEP_WAKE_SUPPORTED_PIN_CNT",
         "range": null,
         "title": null,
         "type": "int"
@@ -2823,6 +2833,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_MWDT_SUPPORT_SLEEP_RETENTION",
+        "name": "SOC_MWDT_SUPPORT_SLEEP_RETENTION",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "SOC_TWAI_CONTROLLER_NUM",
         "name": "SOC_TWAI_CONTROLLER_NUM",
         "range": null,
@@ -3015,6 +3035,26 @@
         "help": null,
         "id": "SOC_FLASH_ENCRYPTION_XTS_AES_128",
         "name": "SOC_FLASH_ENCRYPTION_XTS_AES_128",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_APM_CTRL_FILTER_SUPPORTED",
+        "name": "SOC_APM_CTRL_FILTER_SUPPORTED",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
+        "id": "SOC_APM_LP_APM0_SUPPORTED",
+        "name": "SOC_APM_LP_APM0_SUPPORTED",
         "range": null,
         "title": null,
         "type": "bool"
@@ -3733,6 +3773,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "SOC_LP_CORE_SUPPORT_ETM",
+        "name": "SOC_LP_CORE_SUPPORT_ETM",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_CMAKE",
         "name": "IDF_CMAKE",
         "range": null,
@@ -3803,6 +3853,16 @@
         "children": [],
         "depends_on": null,
         "help": null,
+        "id": "IDF_TOOLCHAIN_GCC",
+        "name": "IDF_TOOLCHAIN_GCC",
+        "range": null,
+        "title": null,
+        "type": "bool"
+    },
+    {
+        "children": [],
+        "depends_on": null,
+        "help": null,
         "id": "IDF_TARGET_ARCH_RISCV",
         "name": "IDF_TARGET_ARCH_RISCV",
         "range": null,
@@ -3848,16 +3908,6 @@
         "range": null,
         "title": null,
         "type": "string"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
-        "id": "IDF_TARGET_LINUX",
-        "name": "IDF_TARGET_LINUX",
-        "range": null,
-        "title": null,
-        "type": "bool"
     },
     {
         "children": [],
@@ -3928,36 +3978,6 @@
         "range": null,
         "title": null,
         "type": "bool"
-    },
-    {
-        "children": [
-            {
-                "children": [],
-                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
-                "help": null,
-                "id": "IDF_TARGET_ESP32C5_BETA3_VERSION",
-                "name": "IDF_TARGET_ESP32C5_BETA3_VERSION",
-                "range": null,
-                "title": "ESP32-C5 beta3",
-                "type": "bool"
-            },
-            {
-                "children": [],
-                "depends_on": "<choice IDF_TARGET_ESP32C5_VERSION>",
-                "help": null,
-                "id": "IDF_TARGET_ESP32C5_MP_VERSION",
-                "name": "IDF_TARGET_ESP32C5_MP_VERSION",
-                "range": null,
-                "title": "ESP32-C5 MP",
-                "type": "bool"
-            }
-        ],
-        "depends_on": "IDF_TARGET_ESP32C5",
-        "help": "ESP32-C5 will support two versions for a period.\nThis option is for internal use only.\nSelect the one that matches your chip model.",
-        "id": "esp32-c5-version",
-        "name": "IDF_TARGET_ESP32C5_VERSION",
-        "title": "ESP32-C5 version",
-        "type": "choice"
     },
     {
         "children": [],
@@ -4328,7 +4348,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice BOOTLOADER_LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "BOOTLOADER_LOG_TIMESTAMP_SOURCE_NONE",
@@ -4629,7 +4649,7 @@
             {
                 "children": [],
                 "depends_on": null,
-                "help": "Protects the unmapped memory regions of the entire address space from unintended accesses.\nThis will ensure that an exception will be triggered whenever the CPU performs a memory\noperation on unmapped regions of the address space.",
+                "help": "Protects the unmapped memory regions of the entire address space from unintended accesses.\nThis will ensure that an exception will be triggered whenever the CPU performs a memory\noperation on unmapped regions of the address space.\nNOTE: Disabling this config on some targets (ESP32-C6, ESP32-H2, ESP32-C5) would not generate\nan exception when reading from or writing to 0x0.",
                 "id": "BOOTLOADER_REGION_PROTECTION_ENABLE",
                 "name": "BOOTLOADER_REGION_PROTECTION_ENABLE",
                 "range": null,
@@ -4724,7 +4744,7 @@
             },
             {
                 "children": [],
-                "depends_on": "SOC_RTC_FAST_MEM_SUPPORTED && ((SECURE_BOOT && SECURE_BOOT_INSECURE) || !SECURE_BOOT)",
+                "depends_on": "(SECURE_BOOT && SECURE_BOOT_INSECURE) || !SECURE_BOOT",
                 "help": "This option disables the normal validation of an image coming out of\ndeep sleep (checksums, SHA256, and signature). This is a trade-off\nbetween wakeup performance from deep sleep, and image integrity checks.\n\nOnly enable this if you know what you are doing. It should not be used\nin conjunction with using deep_sleep() entry and changing the active OTA\npartition as this would skip the validation upon first load of the new\nOTA partition.\n\nIt is possible to enable this option with Secure Boot if \"allow insecure\noptions\" is enabled, however it's strongly recommended to NOT enable it as\nit may allow a Secure Boot bypass.",
                 "id": "BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP",
                 "name": "BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP",
@@ -5994,7 +6014,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "SOC_MEMSPI_SRC_FREQ_80M_SUPPORTED && <choice ESPTOOLPY_FLASHFREQ>",
+                        "depends_on": "SOC_MEMSPI_SRC_FREQ_80M_SUPPORTED && !ESP32P4_REV_MIN_0 && <choice ESPTOOLPY_FLASHFREQ>",
                         "help": null,
                         "id": "ESPTOOLPY_FLASHFREQ_80M",
                         "name": "ESPTOOLPY_FLASHFREQ_80M",
@@ -6383,6 +6403,16 @@
                     {
                         "children": [],
                         "depends_on": "<choice PARTITION_TABLE_TYPE>",
+                        "help": "This is a basic OTA-enabled partition table with\ntwo OTA app partitions. Both app partition sizes are 1700K,\nso this partition table requires 4MB or larger flash size.\n\nThe corresponding CSV file in the IDF directory is\ncomponents/partition_table/partitions_two_ota_large.csv",
+                        "id": "PARTITION_TABLE_TWO_OTA_LARGE",
+                        "name": "PARTITION_TABLE_TWO_OTA_LARGE",
+                        "range": null,
+                        "title": "Two large size OTA partitions",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice PARTITION_TABLE_TYPE>",
                         "help": "Specify the path to the partition table CSV to use for your project.\n\nConsult the Partition Table section in the ESP-IDF Programmers Guide\nfor more information.",
                         "id": "PARTITION_TABLE_CUSTOM",
                         "name": "PARTITION_TABLE_CUSTOM",
@@ -6721,6 +6751,16 @@
             },
             {
                 "children": [],
+                "depends_on": "IDF_TOOLCHAIN_GCC",
+                "help": "Disable merging identical constants (string/floating-point) across compilation units.\nThis helps in better size analysis of the application binary as the rodata section\ndistribution is more uniform across libraries. On downside, it may increase\nthe binary size and hence should be used during development phase only.",
+                "id": "COMPILER_NO_MERGE_CONSTANTS",
+                "name": "COMPILER_NO_MERGE_CONSTANTS",
+                "range": null,
+                "title": "Disable merging const sections",
+                "type": "bool"
+            },
+            {
+                "children": [],
                 "depends_on": null,
                 "help": "Adds -Wwrite-strings flag for the C/C++ compilers.\n\nFor C, this gives string constants the type ``const char[]`` so that\ncopying the address of one into a non-const ``char *`` pointer\nproduces a warning. This warning helps to find at compile time code\nthat tries to write into a string constant.\n\nFor C++, this warns about the deprecated conversion from string\nliterals to ``char *``.",
                 "id": "COMPILER_WARN_WRITE_STRINGS",
@@ -6737,6 +6777,16 @@
                 "name": "COMPILER_SAVE_RESTORE_LIBCALLS",
                 "range": null,
                 "title": "Enable -msave-restore flag to reduce code size",
+                "type": "bool"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Enable this option if you do not want default warnings to be considered as errors,\nespecially when updating IDF.\n\nThis is a temporary flag that could help to allow upgrade while having\nsome time to address the warnings raised by those default warnings.\nAlternatives are:\n1) fix code (preferred),\n2) remove specific warnings,\n3) do not consider specific warnings as error.",
+                "id": "COMPILER_DISABLE_DEFAULT_ERRORS",
+                "name": "COMPILER_DISABLE_DEFAULT_ERRORS",
+                "range": null,
+                "title": "Disable errors for default warnings",
                 "type": "bool"
             },
             {
@@ -6848,6 +6898,16 @@
                 "name": "COMPILER_ORPHAN_SECTIONS",
                 "title": "Orphan sections handling",
                 "type": "choice"
+            },
+            {
+                "children": [],
+                "depends_on": "IDF_TOOLCHAIN_GCC",
+                "help": "Enable compiler static analyzer. This may produce false-positive results and increases compile time.",
+                "id": "COMPILER_STATIC_ANALYZER",
+                "name": "COMPILER_STATIC_ANALYZER",
+                "range": null,
+                "title": "Enable compiler static analyzer",
+                "type": "bool"
             }
         ],
         "depends_on": null,
@@ -7601,69 +7661,19 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_24M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_24",
-                                        "name": "XTAL_FREQ_24",
-                                        "range": null,
-                                        "title": "24 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_26M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_26",
-                                        "name": "XTAL_FREQ_26",
-                                        "range": null,
-                                        "title": "26 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_32M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_32",
-                                        "name": "XTAL_FREQ_32",
-                                        "range": null,
-                                        "title": "32 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_40M && <choice XTAL_FREQ_SEL>",
+                                        "depends_on": "<choice XTAL_FREQ>",
                                         "help": null,
                                         "id": "XTAL_FREQ_40",
                                         "name": "XTAL_FREQ_40",
                                         "range": null,
                                         "title": "40 MHz",
                                         "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_48M && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_48",
-                                        "name": "XTAL_FREQ_48",
-                                        "range": null,
-                                        "title": "48 MHz",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "SOC_XTAL_SUPPORT_AUTO_DETECT && <choice XTAL_FREQ_SEL>",
-                                        "help": null,
-                                        "id": "XTAL_FREQ_AUTO",
-                                        "name": "XTAL_FREQ_AUTO",
-                                        "range": null,
-                                        "title": "Autodetect",
-                                        "type": "bool"
                                     }
                                 ],
                                 "depends_on": null,
-                                "help": "This option selects the operating frequency of the XTAL (crystal) clock used to drive the ESP target.\nThe selected value MUST reflect the frequency of the given hardware.\n\nNote: The XTAL_FREQ_AUTO option allows the ESP target to automatically estimating XTAL clock's\noperating frequency. However, this feature is only supported on the ESP32. The ESP32 uses the\ninternal 8MHZ as a reference when estimating. Due to the internal oscillator's frequency being\ntemperature dependent, usage of the XTAL_FREQ_AUTO is not recommended in applications that operate\nin high ambient temperatures or use high-temperature qualified chips and modules.",
+                                "help": "This option selects the operating frequency of the XTAL (crystal) clock used to drive the ESP target.\nThe selected value MUST reflect the frequency of the given hardware.",
                                 "id": "component-config-hardware-settings-main-xtal-config-main-xtal-frequency",
-                                "name": "XTAL_FREQ_SEL",
+                                "name": "XTAL_FREQ",
                                 "title": "Main XTAL frequency",
                                 "type": "choice"
                             },
@@ -8289,7 +8299,7 @@
                         "id": "ESP_CONSOLE_UART_TX_GPIO",
                         "name": "ESP_CONSOLE_UART_TX_GPIO",
                         "range": null,
-                        "title": "UART TX on GPIO#",
+                        "title": "UART TX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -8299,7 +8309,7 @@
                         "id": "ESP_CONSOLE_UART_RX_GPIO",
                         "name": "ESP_CONSOLE_UART_RX_GPIO",
                         "range": null,
-                        "title": "UART RX on GPIO#",
+                        "title": "UART RX on GPIO<num>",
                         "type": "int"
                     },
                     {
@@ -8340,7 +8350,7 @@
                             {
                                 "children": [],
                                 "depends_on": "ESP_INT_WDT",
-                                "help": "The timeout of the watchdog, in miliseconds. Make this higher than the FreeRTOS tick rate.",
+                                "help": "The timeout of the watchdog, in milliseconds. Make this higher than the FreeRTOS tick rate.",
                                 "id": "ESP_INT_WDT_TIMEOUT_MS",
                                 "name": "ESP_INT_WDT_TIMEOUT_MS",
                                 "range": [
@@ -8467,7 +8477,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "depends_on": "!IDF_TARGET_ESP32 && (ESP_SYSTEM_RTC_EXT_OSC || ESP_SYSTEM_RTC_EXT_XTAL)",
+                        "depends_on": "SOC_XT_WDT_SUPPORTED && (ESP_SYSTEM_RTC_EXT_OSC || ESP_SYSTEM_RTC_EXT_XTAL)",
                         "help": "This watchdog timer can detect oscillation failure of the XTAL32K_CLK. When such a failure\nis detected the hardware can be set up to automatically switch to BACKUP32K_CLK and generate\nan interrupt.",
                         "id": "ESP_XT_WDT",
                         "name": "ESP_XT_WDT",
@@ -9933,7 +9943,7 @@
                                 "children": [
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_NONE",
                                         "name": "LOG_TIMESTAMP_SOURCE_NONE",
@@ -9963,7 +9973,7 @@
                                     },
                                     {
                                         "children": [],
-                                        "depends_on": "No && <choice LOG_TIMESTAMP_SOURCE>",
+                                        "depends_on": "NO_SYMBOL && <choice LOG_TIMESTAMP_SOURCE>",
                                         "help": null,
                                         "id": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",
                                         "name": "LOG_TIMESTAMP_SOURCE_SYSTEM_FULL",

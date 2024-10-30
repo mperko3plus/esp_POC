@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/esp_gdbstub
+# Install script for directory: /home/mperko/esp2/esp-idf/components/esp_gdbstub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

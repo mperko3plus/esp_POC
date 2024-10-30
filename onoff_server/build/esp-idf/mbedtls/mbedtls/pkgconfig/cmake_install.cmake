@@ -1,4 +1,4 @@
-# Install script for directory: /home/mperko/esp-idf/components/mbedtls/mbedtls/pkgconfig
+# Install script for directory: /home/mperko/esp2/esp-idf/components/mbedtls/mbedtls/pkgconfig
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
