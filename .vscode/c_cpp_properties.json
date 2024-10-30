@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/mperko/esp-idf/components/bt/include/esp32/include",
+                "/home/mperko/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include",
+                "/home/mperko/esp-idf/components/bt/esp_ble_mesh/api/core/include",
+                "/home/mperko/esp-idf/components/bt/esp_ble_mesh/api",
+                "/home/mperko/esp-idf/examples/bluetooth/esp_ble_mesh/common_components/example_init",
+                "/home/mperko/esp-idf/components/openthread/openthread",
+                "/home/mperko/esp-idf/examples/openthread",
+                "/home/mperko/esp-idf/examples/openthread/ot_br/managed_components/espressif__esp_ot_cli_extension/include",
+                "/home/mperko/esp-idf/components/openthread/openthread/include",
+                "/home/mperko/esp-idf/components/openthread/openthread/tools/ot-fct",
+                "/home/mperko/esp-idf/components/openthread/openthread/src/posix/platform",
+                "/home/mperko/esp-idf/components/openthread/openthread/src/core",
+                "/home/mperko/esp-idf/components/openthread/openthread/src"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": []
+        }
+    ],
+    "version": 4
+}
